@@ -75,6 +75,12 @@ $(document).ready(function() {
         }
     });
 
+    $('body').on('click', '.faq-item-title', function(e) {
+        var curItem = $(this).parent();
+        curItem.toggleClass('open');
+        curItem.find('.faq-item-text').slideToggle(200);
+    });
+
 });
 
 $(window).on('resize', function() {
@@ -93,6 +99,14 @@ function initForm(curForm) {
         if ($(this).val() != '') {
             $(this).parent().addClass('full');
         }
+    });
+
+    curForm.find('.form-input textarea').each(function() {
+        $(this).css({'height': this.scrollHeight, 'overflow-y': 'hidden'});
+        $(this).on('input', function() {
+            this.style.height = '27px';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
     });
 
     curForm.find('.form-select select').chosen({disable_search: true, no_results_text: 'Нет результатов'});
