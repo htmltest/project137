@@ -23,6 +23,7 @@ iframe {border:none; max-width:100%; max-height:100%; height:auto}
 h1 {font-weight:800; font-size:28px; line-height:38px; margin:44px 0 22px 0; padding:0; text-transform:uppercase; letter-spacing:0.05em; color:#696969}
 h2 {font-weight:800; font-size:26px; line-height:35px; margin:44px 0 22px 0; padding:0; text-transform:uppercase; letter-spacing:0.05em; color:#696969}
 h3 {font-weight:800; font-size:22px; line-height:25px; margin:44px 0 22px 0; padding:0; color:#696969}
+h4 {font-weight:800; font-size:20px; line-height:23px; margin:32px 0 22px 0; padding:0; color:#696969}
 p {margin:22px 0; padding:0}
 ul {margin:32px 0; padding:0; list-style:none}
 ul li {margin:10px 0; padding:0 0 0 26px; position:relative}
@@ -264,6 +265,83 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .main-news-list .slick-next.slick-disabled {display:none !important}
 
 .main-news-all {position:absolute; right:0; top:-9px}
+
+.header-photo {line-height:0}
+.header-photo img {width:100%; display:block}
+
+.about {margin:40px 0 0 0}
+.about::after {content:""; display:block; clear:both}
+
+.about-menu {float:left; width:258px}
+.about-menu ul {margin:0; padding:0; list-style:none; border:1px solid #d9d9d9}
+.about-menu ul.fixed {position:fixed; width:258px; top:20px}
+.about-menu ul li {margin:0; padding:0; border-top:1px solid #d9d9d9}
+.about-menu ul li:first-child {border-top:none}
+.about-menu ul li::before {display:none}
+.about-menu ul li a {display:block; color:#404040; font-size:14px; line-height:20px; padding:12px 20px 12px 44px; position:relative}
+.about-menu ul li a:hover,
+.about-menu ul li.active a {background:#f3f3f3}
+.about-menu ul li a span {display:block; position:absolute; left:0; top:50%; width:44px; text-align:center; line-height:0; transform:translateY(-50%)}
+
+.about-container {margin:0 0 0 295px}
+.about-content {float:left; width:100%}
+.about-content > *:first-child {margin-top:0}
+
+.about-groups-item {margin:63px 0}
+.about-groups-item::after {content:""; display:block; clear:both}
+.about-groups-logo {float:left; line-height:0; max-width:200px; padding:6px 0 0 0}
+.about-groups-content {margin:0 0 0 220px}
+.about-groups-title {font-size:18px; font-weight:bold; line-height:25px; color:#696969}
+.about-groups-text {color:#404040; padding:8px 0 0 0}
+.about-groups-link {font-size:14px; line-height:21px; color:#404040; padding:13px 0 0 0}
+.about-groups-link a {color:#404040; border-bottom:1px dashed #b8b8b8}
+.about-groups-link a:hover {border-bottom-color:#f00}
+.about-groups-link a:active {border-bottom-color:#b8b8b8}
+
+.about-digits {border-top:1px solid #ddd; margin:30px 0 0 0; padding:70px 0; text-align:center; text-transform:uppercase; color:#6d6d6d; font-size:18px; line-height:27px}
+.about-digits::after {content:""; display:block; clear:both}
+.about-digits-item {float:left; width:16.66%}
+.about-digits-value {font-weight:bold; font-size:28px; line-height:38px; color:#696969}
+.about-digits-text {padding:6px 0 0 0}
+
+.download-catalogues {margin:20px -10px 0 -10px}
+.download-catalogues::after {content:""; display:block; clear:both}
+.download-catalogues-col {float:left; width:50%; padding:0 10px}
+.download-catalogues-all {margin-bottom:40px}
+.download-catalogues-all .btn {background:#898989}
+.download-catalogues-all .btn:hover {background:#656565}
+.download-catalogues-all .btn::after {content:""; display:inline-block; vertical-align:middle; width:18px; height:18px; background:url(../images/download.svg) no-repeat; margin:-2px 0 0 10px}
+.download-catalogues-link {font-size:14px; line-height:21px; margin:9px 0}
+h4+.download-catalogues-link {margin-top:-10px}
+.download-catalogues-link a {color:#404040; border-bottom:1px dashed #b8b8b8}
+.download-catalogues-link a:hover {border-bottom-color:#f00}
+.download-catalogues-link a:active {border-bottom-color:#b8b8b8}
+.download-catalogues-link a span {color:#f00; font-weight:600}
+
+.serts {margin:20px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.serts-item {display:inline-block; vertical-align:top; width:25%; padding:10px; font-size:15px; line-height:22px; letter-spacing:0}
+.serts-item-preview {border:6px solid #eee; height:393px; position:relative; overflow:hidden}
+.serts-item-preview img {display:block; width:100%}
+.serts-item h4 {margin:20px 0 0 0}
+.serts-item-text {margin:11px 0 18px 0}
+
+.reference-menu {border-bottom:1px solid #ddd; font-size:18px; line-height:21px; margin:40px 0 0 0}
+.reference-menu ul {margin:0; padding:0; list-style:none}
+.reference-menu ul::after {content:""; display:block; clear:both}
+.reference-menu ul li {float:left; margin:0 0 0 50px; padding:0}
+.reference-menu ul li:first-child {margin:0}
+.reference-menu ul li::before {display:none}
+.reference-menu ul li.active {position:relative}
+.reference-menu ul li.active::after {content:""; display:block; position:absolute; left:0; bottom:-1px; right:0; height:2px; background:#f00}
+.reference-menu ul li a {display:block; color:#696969; padding:0 0 7px 0}
+.reference-menu ul li.active a {font-weight:bold}
+
+.reference {margin:35px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.reference-item {display:inline-block; vertical-align:top; width:33.33%; padding:10px}
+.reference-item a {display:block; position:relative}
+.reference-item img {display:block; width:100%}
+.reference-item span {display:block; position:absolute; left:50%; bottom:30px; max-width:calc(100% - 20px); padding:0 20px; font-size:14px; line-height:40px; font-weight:bold; letter-spacing:0; color:#fff; text-align:center; transform:translateX(-50%); border-radius:3px; background:#898989; transition:all 0.2s}
+.reference-item a:hover span {background:#656565}
 
 footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c}
 
