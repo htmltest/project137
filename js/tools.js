@@ -103,6 +103,26 @@ $(document).ready(function() {
         dots: true
     });
 
+    $('.valesa-about-gallery-list').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
+        dots: true,
+        adaptiveHeight: true
+    });
+
+    $('.product-about-gallery-list').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
+        dots: true,
+        adaptiveHeight: true
+    });
+
 });
 
 $(window).on('resize', function() {
