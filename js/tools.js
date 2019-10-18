@@ -81,6 +81,28 @@ $(document).ready(function() {
         curItem.find('.faq-item-text').slideToggle(200);
     });
 
+    $('body').on('click', '.grms-tabs-menu ul li a', function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            var curTabs = curLi.parents().filter('.grms-tabs');
+            curTabs.find('.grms-tabs-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+            var curIndex = curTabs.find('.grms-tabs-menu ul li').index(curLi);
+            curTabs.find('.grms-tabs-content.active').removeClass('active');
+            curTabs.find('.grms-tabs-content').eq(curIndex).addClass('active');
+        }
+        e.preventDefault();
+    });
+
+    $('.grms-products').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
+        dots: true
+    });
+
 });
 
 $(window).on('resize', function() {

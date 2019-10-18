@@ -24,6 +24,7 @@ h1 {font-weight:800; font-size:28px; line-height:38px; margin:44px 0 22px 0; pad
 h2 {font-weight:800; font-size:26px; line-height:35px; margin:44px 0 22px 0; padding:0; text-transform:uppercase; letter-spacing:0.05em; color:#696969}
 h3 {font-weight:800; font-size:22px; line-height:25px; margin:44px 0 22px 0; padding:0; color:#696969}
 h4 {font-weight:800; font-size:20px; line-height:23px; margin:32px 0 22px 0; padding:0; color:#696969}
+h5 {font-weight:bold; font-size:17px; line-height:19px; margin:32px 0 22px 0; padding:0; color:#696969}
 p {margin:22px 0; padding:0}
 ul {margin:32px 0; padding:0; list-style:none}
 ul li {margin:10px 0; padding:0 0 0 26px; position:relative}
@@ -37,6 +38,7 @@ ol li ol li {padding:0 0 0 44px}
 ol li ol li::before {content:counter(point)'.'counter(point); counter-increment:subpoint 1}
 blockquote {margin:32px 0; padding:0 0 0 110px; font-size:18px; line-height:27px; color:#757575; position:relative}
 blockquote::before {content:""; display:block; position:absolute; left:4px; top:6px; width:58px; height:49px; background:url(../images/blockquote.svg) no-repeat}
+hr {margin:32px 0 66px 0; height:1px; padding:0; border:none; background:#ddd}
 
 .wrapper table {width:100%; border-collapse:collapse; margin:44px 0}
 .wrapper th {vertical-align:top; text-align:left; padding:0 20px 21px 20px; font-size:15px; line-height:22px; color:#000; text-transform:uppercase; letter-spacing:0.05em; font-weight:normal}
@@ -441,6 +443,104 @@ h4+.download-catalogues-link {margin-top:-10px}
 .search-result-path a:hover {text-decoration:underline}
 .search-result-path strong {font-weight:bold}
 .search-result-path span {display:inline-block; vertical-align:middle; margin:-2px 10px 0 10px; width:6px; height:10px; background:url(../images/breadcrumbs.svg) no-repeat}
+
+.grms-about {margin:40px 0 70px 0}
+.grms-about::after {content:""; display:block; clear:both}
+.grms-about-text {float:left; width:50%; padding:0 80px 0 0}
+.grms-about-text h1 {margin:0}
+.grms-about-photo {float:left; width:50%; line-height:0}
+
+.grms-complex {border-top:1px solid #ddd; padding:40px 0 0 0; margin:0 0 120px 0}
+.grms-complex-item {display:table; width:100%}
+.grms-complex-item:nth-child(even) {direction:rtl}
+.grms-complex-photo {display:table-cell; vertical-align:middle; line-height:0; width:50%}
+.grms-complex-photo-inner {margin:0 0 0 -60px; text-align:right; direction:ltr}
+.grms-complex-item:nth-child(even) .grms-complex-photo-inner {margin:0 -60px 0 0; text-align:left}
+.grms-complex-content {display:table-cell; vertical-align:middle; width:50%; padding:0 0 0 70px; color:#696969}
+.grms-complex-item:nth-child(even) .grms-complex-content {padding:0 70px 0 0; direction:ltr}
+.grms-complex-content p {margin:13px 0}
+.grms-complex-content ul {margin:13px 0; font-weight:600; color:#696969}
+.grms-complex-content ul li {margin:0}
+.grms-complex-content > *:first-child {margin-top:0}
+.grms-complex-content > *:last-child {margin-bottom:0}
+.grms-comples-modes {font-weight:600; color:#000; margin:40px 0 0 0}
+.grms-comples-modes-img {display:inline-block; vertical-align:middle}
+.grms-comples-modes-img img {display:block}
+.grms-comples-modes-text {display:inline-block; vertical-align:middle}
+.grms-comples-modes-img+.grms-comples-modes-text {margin:0 0 0 8px}
+.grms-comples-modes-text+.grms-comples-modes-img {margin:0 0 0 42px}
+
+.grms-tabs-menu {border-bottom:1px solid #ddd; font-size:18px; line-height:21px; margin:40px 0 0 0}
+.grms-tabs-menu ul {margin:0; padding:0; list-style:none}
+.grms-tabs-menu ul::after {content:""; display:block; clear:both}
+.grms-tabs-menu ul li {float:left; margin:0 0 0 50px; padding:0}
+.grms-tabs-menu ul li:first-child {margin:0}
+.grms-tabs-menu ul li::before {display:none}
+.grms-tabs-menu ul li.active {position:relative}
+.grms-tabs-menu ul li.active::after {content:""; display:block; position:absolute; left:0; bottom:-1px; right:0; height:2px; background:#f00}
+.grms-tabs-menu ul li a {display:block; color:#696969; padding:0 0 7px 0}
+.grms-tabs-menu ul li.active a {font-weight:bold}
+.grms-tabs-container {margin:80px 0}
+.grms-tabs-content {position:absolute; left:-9999px; top:-9999px; width:100%; opacity:0; transition:opacity 0.2s}
+.grms-tabs-content.active {position:relative; left:auto; top:auto; opacity:1}
+.grms-tabs-wrap::after {content:""; display:block; clear:both}
+.grms-tabs-photo {float:left; width:630px; line-height:0}
+.grms-tabs-text {margin:0 0 0 730px}
+.grms-tabs-text ul {margin:0; color:#3c3c3c}
+.grms-tabs-text ul li {margin:0}
+
+.grms-solution-wrap+.grms-solution-wrap {margin-top:120px}
+.grms-solution-wrap h2 {max-width:50%}
+.grms-solution {display:table; width:100%; margin:22px 0}
+.grms-solution-text {display:table-cell; vertical-align:middle; padding:0 70px 0 0; color:#696969}
+.grms-solution-text p {margin:13px 0}
+.grms-solution-text ul {margin:13px 0; font-weight:600; color:#696969}
+.grms-solution-text ul li {margin:0}
+.grms-solution-text > *:first-child {margin-top:0}
+.grms-solution-text > *:last-child {margin-bottom:0}
+.grms-solution-photo {display:table-cell; vertical-align:middle; line-height:0; width:50%; text-align:center}
+.grms-solution-wrap hr {margin:22px 0}
+
+.grms-products {margin:120px -7px 0 -7px; position:relative; font-size:0; line-height:0; letter-spacing:-1px; overflow:hidden; white-space:nowrap}
+hr+.grms-products {margin-top:-36px}
+.grms-products.slick-initialized {overflow:visible}
+.grms-product {display:inline-block; vertical-align:top; width:25%; padding:0 7px; white-space:normal}
+.grms-product a {display:block; color:#404040}
+.grms-product a:hover {color:#ff3d3d}
+.grms-product-preview {height:333px; border:3px solid #eee; line-height:327px; text-align:center; transition:all 0.2s}
+.grms-product a:hover .grms-product-preview {border-color:#ff3d3d}
+.grms-product-preview img {display:inline-block; vertical-align:middle}
+.grms-products .slick-slide .grms-product-preview img {display:inline-block}
+.grms-product-title {font-size:18px; line-height:21px; letter-spacing:0; padding:32px 0 0 0}
+.grms-products .slick-prev,
+.grms-products .slick-next {display:block; position:absolute; z-index:2; top:155px; width:14px; height:23px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transparent}
+.grms-products .slick-prev {left:-26px}
+.grms-products .slick-next {right:-26px}
+.grms-products .slick-prev svg,
+.grms-products .slick-next svg {display:block}
+.grms-products .slick-prev path,
+.grms-products .slick-next path {stroke:#b0b0b0; transition:all 0.2s}
+.grms-products .slick-prev:hover path,
+.grms-products .slick-next:hover path {stroke:#5a5a5a}
+.grms-products .slick-dots {margin:32px 0 0 0; padding:0; list-style:none; text-align:center}
+.grms-products .slick-dots li {margin:0 0 0 17px; padding:0; display:inline-block; vertical-align:top; position:relative}
+.grms-products .slick-dots li::before {display:none}
+.grms-products .slick-dots li:first-child {margin:0}
+.grms-products .slick-dots li button {display:block; position:relative; width:14px; height:14px; border-radius:50%; border:none; background:#e3e3e3; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.grms-products .slick-dots li.slick-active button {background:#bebebe}
+.grms-products .slick-prev.slick-disabled,
+.grms-products .slick-next.slick-disabled {display:none !important}
+
+.knx-download-btn {margin:60px 0 0 0}
+.knx-download-btn .btn {background:#a4a4a4}
+.knx-download-btn .btn:hover {background:#656565}
+.knx-download-btn .btn::after {content:""; display:inline-block; vertical-align:middle; width:18px; height:18px; background:url(../images/download.svg) no-repeat; margin:-2px 0 0 10px}
+
+.knx-ext {border-top:1px solid #ddd; padding:46px 0 0 0; margin:0 0 87px 0}
+.knx-ext-inner {margin:0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
+.knx-ext-item {display:inline-block; vertical-align:top; width:10%; padding:0 10px}
+.knx-ext-item-icon img {display:block; width:100%}
+.knx-ext-item-title {padding:17px 0 0 0; font-size:12px; line-height:15px; color:#000; letter-spacing:0}
 
 footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c}
 

@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>EAE</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <div class="top">
+                    <div class="container">
+                        Представительство в России
+                    </div>
+                </div>
+
+                <header>
+                    <div class="container">
+
+                        <div class="header-social">
+                            <a href="#" target="_blank"><svg width="23" height="23" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 15C30 6.71484 23.2852 0 15 0C6.71484 0 0 6.71484 0 15C0 22.4883 5.48438 28.6934 12.6562 29.8184V19.3359H8.84766V15H12.6562V11.6953C12.6562 7.93652 14.8945 5.85938 18.3223 5.85938C19.9629 5.85938 21.6797 6.15234 21.6797 6.15234V9.84375H19.7871C17.9238 9.84375 17.3438 11.001 17.3438 12.1875V15H21.5039L20.8389 19.3359H17.3438V29.8184C24.5156 28.6934 30 22.4883 30 15Z" /></svg></a>
+                            <a href="#" target="_blank"><svg width="23" height="23" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.1162 0C6.83194 0 0.116211 6.71573 0.116211 15C0.116211 23.2843 6.83194 30 15.1162 30C23.4005 30 30.1162 23.2843 30.1162 15C30.1162 6.71573 23.4005 0 15.1162 0ZM21.3672 9.84333C22.0557 10.0322 22.5978 10.5889 22.7818 11.2958C23.1162 12.5769 23.1162 15.25 23.1162 15.25C23.1162 15.25 23.1162 17.923 22.7818 19.2042C22.5978 19.9111 22.0557 20.4678 21.3672 20.6568C20.1196 21 15.1162 21 15.1162 21C15.1162 21 10.1128 21 8.86512 20.6568C8.17667 20.4678 7.63448 19.9111 7.45048 19.2042C7.11621 17.923 7.11621 15.25 7.11621 15.25C7.11621 15.25 7.11621 12.5769 7.45048 11.2958C7.63448 10.5889 8.17667 10.0322 8.86512 9.84333C10.1128 9.5 15.1162 9.5 15.1162 9.5C15.1162 9.5 20.1196 9.5 21.3672 9.84333Z" /><path d="M13.6162 18V13L17.6162 15.5001L13.6162 18Z" /></svg></a>
+                            <a href="#" target="_blank"><svg width="23" height="23" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.2314 0C6.94717 0 0.231445 6.71573 0.231445 15C0.231445 23.2843 6.94717 30 15.2314 30C23.5157 30 30.2314 23.2843 30.2314 15C30.2314 6.71573 23.5157 0 15.2314 0ZM11.9335 7.04833C12.7868 7.0095 13.0595 7 15.2322 7H15.2297C17.4031 7 17.6747 7.0095 18.5281 7.04833C19.3797 7.08733 19.9614 7.22217 20.4714 7.42C20.9981 7.62417 21.4431 7.89751 21.8881 8.34251C22.3331 8.78719 22.6064 9.23352 22.8114 9.7597C23.0081 10.2684 23.1431 10.8497 23.1831 11.7014C23.2214 12.5547 23.2314 12.8274 23.2314 15.0001C23.2314 17.1728 23.2214 17.4448 23.1831 18.2981C23.1431 19.1495 23.0081 19.731 22.8114 20.2398C22.6064 20.7658 22.3331 21.2122 21.8881 21.6568C21.4436 22.1018 20.9979 22.3758 20.4719 22.5802C19.9629 22.778 19.3809 22.9128 18.5292 22.9518C17.6759 22.9907 17.4041 23.0002 15.2312 23.0002C13.0587 23.0002 12.7862 22.9907 11.9328 22.9518C11.0813 22.9128 10.4998 22.778 9.99081 22.5802C9.46497 22.3758 9.01863 22.1018 8.57413 21.6568C8.12929 21.2122 7.85595 20.7658 7.65145 20.2396C7.45378 19.731 7.31895 19.1496 7.27978 18.298C7.24111 17.4446 7.23145 17.1728 7.23145 15.0001C7.23145 12.8274 7.24145 12.5546 7.27961 11.7012C7.31795 10.8499 7.45295 10.2684 7.65128 9.75953C7.85629 9.23352 8.12962 8.78719 8.57463 8.34251C9.0193 7.89768 9.46564 7.62434 9.99181 7.42C10.5005 7.22217 11.0818 7.08733 11.9335 7.04833Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5146 8.4417C14.6539 8.44148 14.8038 8.44155 14.9656 8.44162L15.2322 8.4417C17.3683 8.4417 17.6214 8.44936 18.4649 8.4877C19.2449 8.52336 19.6683 8.6537 19.9503 8.7632C20.3236 8.9082 20.5898 9.08154 20.8696 9.36154C21.1496 9.64154 21.323 9.90821 21.4683 10.2815C21.5778 10.5632 21.7083 10.9866 21.7438 11.7666C21.7821 12.6099 21.7905 12.8632 21.7905 14.9983C21.7905 17.1333 21.7821 17.3866 21.7438 18.23C21.7081 19.01 21.5778 19.4333 21.4683 19.715C21.3233 20.0883 21.1496 20.3542 20.8696 20.634C20.5896 20.914 20.3238 21.0873 19.9503 21.2323C19.6686 21.3423 19.2449 21.4723 18.4649 21.508C17.6216 21.5463 17.3683 21.5547 15.2322 21.5547C13.096 21.5547 12.8429 21.5463 11.9995 21.508C11.2195 21.472 10.7962 21.3417 10.514 21.2322C10.1407 21.0872 9.87401 20.9138 9.594 20.6338C9.314 20.3538 9.14067 20.0878 8.99533 19.7143C8.88583 19.4326 8.75533 19.0093 8.71983 18.2293C8.68149 17.386 8.67383 17.1326 8.67383 14.9963C8.67383 12.8599 8.68149 12.6079 8.71983 11.7646C8.7555 10.9846 8.88583 10.5612 8.99533 10.2792C9.14033 9.90588 9.314 9.63921 9.594 9.35921C9.87401 9.0792 10.1407 8.90587 10.514 8.76053C10.796 8.65053 11.2195 8.52053 11.9995 8.4847C12.7375 8.45136 13.0235 8.44136 14.5146 8.4397V8.4417ZM19.5026 9.77011C18.9726 9.77011 18.5426 10.1996 18.5426 10.7298C18.5426 11.2598 18.9726 11.6898 19.5026 11.6898C20.0326 11.6898 20.4626 11.2598 20.4626 10.7298C20.4626 10.1998 20.0326 9.76978 19.5026 9.76978V9.77011ZM11.1238 15.0002C11.1238 12.7314 12.9632 10.8919 15.232 10.8918C17.5008 10.8918 19.3399 12.7314 19.3399 15.0002C19.3399 17.2691 17.501 19.1078 15.2322 19.1078C12.9633 19.1078 11.1238 17.2691 11.1238 15.0002Z" /><path d="M15.2321 12.3335C16.7048 12.3335 17.8988 13.5273 17.8988 15.0002C17.8988 16.4729 16.7048 17.6669 15.2321 17.6669C13.7593 17.6669 12.5654 16.4729 12.5654 15.0002C12.5654 13.5273 13.7593 12.3335 15.2321 12.3335Z" /></svg></a>
+                        </div>
+
+                        <div class="logo"><a href="#"></a></div>
+
+                        <div class="header-menu header-menu-main">
+                            <ul>
+                                <li><a href="#">EAE</a></li>
+                                <li class="with-submenu active">
+                                    <a href="#">Решения</a>
+                                    <ul>
+                                        <li><a href="#">GRMS решения для отелей</a></li>
+                                        <li><a href="#">Умный дом KNX и решения для жилых зданий</a></li>
+                                        <li><a href="#">KNX коммерческие и промышленные решения</a></li>
+                                    </ul>
+                                </li>
+                                <li class="with-submenu">
+                                    <a href="#">Продукция KNX</a>
+                                    <ul>
+                                        <li><a href="#">Сенсорная KNX панель Valesa</a></li>
+                                        <li><a href="#">Устройства управления</a></li>
+                                    </ul>
+                                </li>
+                                <li class="with-submenu">
+                                    <a href="#">Скачать</a>
+                                    <ul>
+                                        <li><a href="#">Каталоги</a></li>
+                                        <li><a href="#">Сертификаты</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header-menu header-menu-add">
+                            <ul>
+                                <li><a href="#">Референсы</a></li>
+                                <li><a href="#">Вопросы</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li class="with-submenu">
+                                    <a href="#">Контакты</a>
+                                    <ul>
+                                        <li><a href="#">Штаб-квартира</a></li>
+                                        <li><a href="#">Мировые партнеры</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="header-search">
+                            <a href="#" class="header-search-link"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.5873 14.5873C14.0371 15.1376 13.1452 15.1376 12.5949 14.5873L10.1087 12.1011C9.08655 12.7568 7.87832 13.1475 6.57376 13.1475C2.94343 13.1475 0 10.2045 0 6.57373C0 2.94299 2.94343 0 6.57376 0C10.2046 0 13.1475 2.94293 13.1475 6.57373C13.1475 7.87785 12.7563 9.08655 12.1011 10.1092L14.5873 12.5954C15.1376 13.1456 15.1376 14.0371 14.5873 14.5873ZM6.57376 1.8782C3.98066 1.8782 1.87822 3.98016 1.87822 6.5737C1.87822 9.16724 3.98069 11.2692 6.57376 11.2692C9.16726 11.2692 11.2693 9.16724 11.2693 6.5737C11.2693 3.98016 9.16726 1.8782 6.57376 1.8782Z" /></svg></a>
+                        </div>
+
+                    </div>
+                </header>
+
+                <div class="header-photo"><img src="files/grms-header.jpg" alt="" /></div>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">Главная</a><span></span><strong>Решение GRMS для отелей</strong></div>
+
+                    <div class="grms-about">
+                        <div class="grms-about-text">
+                            <h1>Решение GRMS для отелей</h1>
+                            <blockquote>Система управления гостиничным номером (GRMS) от EAE Technology разработана для обеспечения максимально комфортного и приятного отдыха ваших гостей. Наши интеллектуальные решения основаны на интерактивных технологиях, создают удобство, высокий уровень комфорта в номере и высоко ценятся гостями.</blockquote>
+                        </div>
+                        <div class="grms-about-photo"><img src="files/grms-01.jpg" alt="" /></div>
+                    </div>
+
+                    <h2>Комплексное проектирование grms решений для отеля</h2>
+
+                    <!-- grms comples -->
+                    <div class="grms-complex">
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-02.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Интеграция в системы PMS ...</h3>
+                                <p>Следующие платформы легко интегрируются с системами GRMS</p>
+                                <ul>
+                                    <li>Fidelio</li>
+                                    <li>Opera</li>
+                                    <li>OnQ</li>
+                                    <li>Micros</li>
+                                    <li>И многие другие…</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-03.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Энергосбережение...</h3>
+                                <p>Одним из самых больших расходов гостиничного бизнеса является потребление энергии.<br /> Когда в номере никого нет, но освещение и кондиционер не выключены – расходы энергии будут неоправданно расти.<br /> EAE GRMS делает отель современным, функциональным, а главное энергоэффективным, благодаря комплексной автоматизации.</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-04.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Функциональность…</h3>
+                                <p>В случае неисправностей на объекте EAE GRMS незамедлительно оповещает об этом администрацию.<br /> Эксплуатация объекта осуществляется таким образом, чтобы в случае происшествия можно было оперативно выявить неполадки.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- grms comples END -->
+
+                    <h2>GRMS оборудование</h2>
+
+                    <!-- grms tabs -->
+                    <div class="grms-tabs">
+                        <div class="grms-tabs-menu">
+                            <ul>
+                                <li class="active"><a href="#">Комнатное оборудование</a></li>
+                                <li><a href="#">Щитовое оборудование</a></li>
+                                <li><a href="#">Софт</a></li>
+                            </ul>
+                        </div>
+                        <div class="grms-tabs-container">
+                            <div class="grms-tabs-content active">
+                                <div class="grms-tabs-wrap">
+                                    <div class="grms-tabs-photo"><img src="files/grms-05.jpg" alt="" /></div>
+                                    <div class="grms-tabs-text">
+                                        <ul>
+                                            <li>Выключатели</li>
+                                            <li>Термостаты</li>
+                                            <li>Розетки</li>
+                                            <li>DND/MUR</li>
+                                            <li>Информационный дисплей</li>
+                                            <li>Картхолдер</li>
+                                            <li>Сенсоры</li>
+                                            <li>Дверной доступ</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- grms tabs END -->
+
+                    <hr />
+
+                    <div class="grms-solution-wrap">
+                        <h2>GRMS решения с использованием картхолдера</h2>
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-text">
+                                <p>С помощью Модуля Гостиничного Логического Контроллера, присутствие в номере контролируется без использования картхолдера.</p>
+                                <p>Это позволяет администрации отеля экономить электроэнергию, а также автоматически вызывать необходимые сценарии, когда гостей нет в номере.</p>
+                                <h5>With Cardholder</h5>
+                                <p><img src="files/grms-07.jpg" alt="" /></p>
+                            </div>
+                            <div class="grms-solution-photo"><img src="files/grms-06.jpg" alt="" /></div>
+                        </div>
+                    </div>
+
+                    <div class="grms-solution-wrap">
+                        <h2>Топология Grms с&nbsp;использованием картхолдера</h2>
+
+                        <hr />
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-photo"><img src="files/grms-08.jpg" alt="" /></div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="grms-solution-wrap">
+                        <h2>GRMS решения без&nbsp;использования картхолдера</h2>
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-text">
+                                <p>С помощью Модуля Гостиничного Логического Контроллера, присутствие в номере контролируется без использования картхолдера.</p>
+                                <p>Это позволяет администрации отеля экономить электроэнергию, а также автоматически вызывать необходимые сценарии, когда гостей нет в номере.</p>
+                                <h5>With Cardholder</h5>
+                                <p><img src="files/grms-07-2.jpg" alt="" /></p>
+                            </div>
+                            <div class="grms-solution-photo"><img src="files/grms-06.jpg" alt="" /></div>
+                        </div>
+                    </div>
+
+                    <div class="grms-solution-wrap">
+                        <h2>Топология Grms без&nbsp;использования картхолдера</h2>
+
+                        <hr />
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-photo"><img src="files/grms-09.jpg" alt="" /></div>
+                        </div>
+                    </div>
+
+                    <div class="grms-solution-wrap">
+                        <h2>EAE HLC Логический Контроллер для отелей</h2>
+
+                        <hr />
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-text">
+                                <h3>Сценарии номера</h3>
+                                <p>В системе HLC есть 4 различных сценария.</p>
+                                <ul>
+                                    <li>До заезда</li>
+                                    <li>Добро пожаловать</li>
+                                    <li>Покидаю номер</li>
+                                    <li>Заезд / Сдача номера</li>
+                                </ul>
+                                <p>Как только, гость входит в комнату, сцена с желаемым освещением может быть предварительно включена.</p>
+                            </div>
+                            <div class="grms-solution-photo"><img src="files/grms-06.jpg" alt="" /></div>
+                        </div>
+
+                        <hr />
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-text">
+                                <h3>Сценарий «Добро пожаловать»</h3>
+                                <p>Может задействовать освещение, вентиляцию и&nbsp;кондиционирование, шторы или жалюзи, розетки в&nbsp;номере, если гости находятся в номере.</p>
+                            </div>
+                            <div class="grms-solution-photo"><img src="files/grms-06.jpg" alt="" /></div>
+                        </div>
+
+                        <hr />
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-text">
+                                <h3>Сценарий «Покидаю номер»</h3>
+                                <p>Когда гость покидает номер, сценарий активируется через определенное время. Всё освещение, розетки и&nbsp;кондиционеры будут отключены. По желанию, состояние кондиционера может быть установлено на&nbsp;желаемую заданную температуру или авто-режим.</p>
+                            </div>
+                            <div class="grms-solution-photo"><img src="files/grms-06.jpg" alt="" /></div>
+                        </div>
+
+                        <hr />
+
+                        <div class="grms-solution">
+                            <div class="grms-solution-text">
+                                <h3>Сценарий «Заезд / Сдача номера»</h3>
+                                <p>После регистрации / выезда гостей можно активировать желаемый сценарии с интеграцией решений GRMS и PMS.</p>
+                            </div>
+                            <div class="grms-solution-photo"><img src="files/grms-06.jpg" alt="" /></div>
+                        </div>
+                    </div>
+
+                    <h2>Продукты</h2>
+
+                    <!-- grms comples -->
+                    <div class="grms-complex">
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-10.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Металлическаяповерхность</h3>
+                                <p>Rosa сенсорные термостаты представлены в 4 цветовых вариантах (естественный, золотой, бронзовый, антрацит)</p>
+                                <p><img src="files/grms-11.jpg" alt="" /></p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-24.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Безрамочный Design....</h3>
+                                <p>85 х 85 мм безрамное исполнение</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-12.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Rosa стекло...</h3>
+                                <ul>
+                                    <li>Термостат и выключатель, все в одном</li>
+                                    <li>4 мм закаленное стекло</li>
+                                    <li>Неограниченная цветовая гамма</li>
+                                    <li>Любой цвет из палитры RAL</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-13.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Контроль с одного устройства…</h3>
+                                <p>С Термостатов Rosa можно осуществлять управление</p>
+                                <ul>
+                                    <li>Освещением</li>
+                                    <li>Шторами или жалюзи</li>
+                                    <li>Управление сценами</li>
+                                    <li>Контроль HVAC</li>
+                                    <li>Дисплей DND/MU</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-14.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Сенсорное управление…</h3>
+                                <p>Реализовано с любой точки поверхности (сбоку, фронтально, в углу…) как для стекла, так и для металла</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-15.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>LED индикация…</h3>
+                                <p>Светодиодная индикация состояния освещения, штор/жалюзи и кондиционеров</p>
+                                <h3>LED навигация…</h3>
+                                <p>Светодиодная индикация поможет легко найти термостат в темноте.</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-16.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Кастомная инфографика…</h3>
+                                <p>Индивидуальные варианты значков в серии Rosa для&nbsp;выключателей и термостатов из стекла или металла</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-17.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Режимы...</h3>
+                                <div class="grms-comples-modes">
+                                    <div class="grms-comples-modes-img"><img src="files/grms-icon-1.png" alt="" /></div>
+                                    <div class="grms-comples-modes-text">Ухожу</div>
+                                    <div class="grms-comples-modes-img"><img src="files/grms-icon-2.png" alt="" /></div>
+                                    <div class="grms-comples-modes-text">Комфорт</div>
+                                    <div class="grms-comples-modes-img"><img src="files/grms-icon-3.png" alt="" /></div>
+                                    <div class="grms-comples-modes-text">Ночной режим</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-18.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Климат контроль</h3>
+                                <p>Термостаты Rosa имеют функцию автоматического переключения на отопление / охлаждение Управление несколькими системами отопления или охлаждения можно настроить синхронизировано.</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-19.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Материалы серии Rosa...</h3>
+                                <p>Для выключателей и термостатов Rosa мы используем алюминий 7000 серии сплава.</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-20.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Розетки Rosa …</h3>
+                                <ul>
+                                    <li>Европейский, английский и универсальный стандарт</li>
+                                    <li>Рамки для розеток от 1 до 6-ти постов</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-21.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>DND/MUR…</h3>
+                                <p>Информационный дисплей показывает информацию о состоянии номера. (Размещение, DND, MUR)</p>
+                                <p>Встроенная сенсорная кнопка</p>
+                                <p>Подходит для монтажа заподлицо</p>
+                                <p>Функция звонка может блокироваться пользователем</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-22.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Устройство считывания карт с дверным замком</h3>
+                                <p>RFID 13,56 МГц - система бесконтактной блокировки карт</p>
+                                <p>Двухстороння дверная ручка</p>
+                                <p>Замок с 5-ти кратной защёлкой и функцией «антипаника»</p>
+                                <p>Службы батареи 2 года или 50000 срабатываний</p>
+                                <p>Память на 800 операций</p>
+                            </div>
+                        </div>
+
+                        <div class="grms-complex-item">
+                            <div class="grms-complex-photo">
+                                <div class="grms-complex-photo-inner"><img src="files/grms-23.jpg" alt="" /></div>
+                            </div>
+                            <div class="grms-complex-content">
+                                <h3>Card Holder...</h3>
+                                <p>Карты Mifare 13,56 МГц (опционально 125 кГц)</p>
+                                <p>Бесконтактное считывание информации RF карт</p>
+                                <p>Только собственные карты отеля</p>
+                                <p>Красная / синяя светодиодная индикация</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- grms comples END -->
+
+                    <!-- grms products -->
+                    <div class="grms-products">
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-1.jpg" alt="" /></div>
+                                <div class="grms-product-title">Устройство для считывания карт с дверным замком</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-2.jpg" alt="" /></div>
+                                <div class="grms-product-title">DND/MUR Информационный дисплей</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-3.jpg" alt="" /></div>
+                                <div class="grms-product-title">Rosa Выключатели</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-4.jpg" alt="" /></div>
+                                <div class="grms-product-title">ROSA Термостаты</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-1.jpg" alt="" /></div>
+                                <div class="grms-product-title">Устройство для считывания карт с дверным замком</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-2.jpg" alt="" /></div>
+                                <div class="grms-product-title">DND/MUR Информационный дисплей</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-3.jpg" alt="" /></div>
+                                <div class="grms-product-title">Rosa Выключатели</div>
+                            </a>
+                        </div>
+                        <div class="grms-product">
+                            <a href="#">
+                                <div class="grms-product-preview"><img src="files/grms-product-4.jpg" alt="" /></div>
+                                <div class="grms-product-title">ROSA Термостаты</div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- grms products END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="container">
+
+                <div class="footer-logo"></div>
+
+                <div class="footer-social">
+                    <a href="#" target="_blank"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 15C30 6.71484 23.2852 0 15 0C6.71484 0 0 6.71484 0 15C0 22.4883 5.48438 28.6934 12.6562 29.8184V19.3359H8.84766V15H12.6562V11.6953C12.6562 7.93652 14.8945 5.85938 18.3223 5.85938C19.9629 5.85938 21.6797 6.15234 21.6797 6.15234V9.84375H19.7871C17.9238 9.84375 17.3438 11.001 17.3438 12.1875V15H21.5039L20.8389 19.3359H17.3438V29.8184C24.5156 28.6934 30 22.4883 30 15Z" /></svg></a>
+                    <a href="#" target="_blank"><svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.1162 0C6.83194 0 0.116211 6.71573 0.116211 15C0.116211 23.2843 6.83194 30 15.1162 30C23.4005 30 30.1162 23.2843 30.1162 15C30.1162 6.71573 23.4005 0 15.1162 0ZM21.3672 9.84333C22.0557 10.0322 22.5978 10.5889 22.7818 11.2958C23.1162 12.5769 23.1162 15.25 23.1162 15.25C23.1162 15.25 23.1162 17.923 22.7818 19.2042C22.5978 19.9111 22.0557 20.4678 21.3672 20.6568C20.1196 21 15.1162 21 15.1162 21C15.1162 21 10.1128 21 8.86512 20.6568C8.17667 20.4678 7.63448 19.9111 7.45048 19.2042C7.11621 17.923 7.11621 15.25 7.11621 15.25C7.11621 15.25 7.11621 12.5769 7.45048 11.2958C7.63448 10.5889 8.17667 10.0322 8.86512 9.84333C10.1128 9.5 15.1162 9.5 15.1162 9.5C15.1162 9.5 20.1196 9.5 21.3672 9.84333Z" /><path d="M13.6162 18V13L17.6162 15.5001L13.6162 18Z" /></svg></a>
+                    <a href="#" target="_blank"><svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.2314 0C6.94717 0 0.231445 6.71573 0.231445 15C0.231445 23.2843 6.94717 30 15.2314 30C23.5157 30 30.2314 23.2843 30.2314 15C30.2314 6.71573 23.5157 0 15.2314 0ZM11.9335 7.04833C12.7868 7.0095 13.0595 7 15.2322 7H15.2297C17.4031 7 17.6747 7.0095 18.5281 7.04833C19.3797 7.08733 19.9614 7.22217 20.4714 7.42C20.9981 7.62417 21.4431 7.89751 21.8881 8.34251C22.3331 8.78719 22.6064 9.23352 22.8114 9.7597C23.0081 10.2684 23.1431 10.8497 23.1831 11.7014C23.2214 12.5547 23.2314 12.8274 23.2314 15.0001C23.2314 17.1728 23.2214 17.4448 23.1831 18.2981C23.1431 19.1495 23.0081 19.731 22.8114 20.2398C22.6064 20.7658 22.3331 21.2122 21.8881 21.6568C21.4436 22.1018 20.9979 22.3758 20.4719 22.5802C19.9629 22.778 19.3809 22.9128 18.5292 22.9518C17.6759 22.9907 17.4041 23.0002 15.2312 23.0002C13.0587 23.0002 12.7862 22.9907 11.9328 22.9518C11.0813 22.9128 10.4998 22.778 9.99081 22.5802C9.46497 22.3758 9.01863 22.1018 8.57413 21.6568C8.12929 21.2122 7.85595 20.7658 7.65145 20.2396C7.45378 19.731 7.31895 19.1496 7.27978 18.298C7.24111 17.4446 7.23145 17.1728 7.23145 15.0001C7.23145 12.8274 7.24145 12.5546 7.27961 11.7012C7.31795 10.8499 7.45295 10.2684 7.65128 9.75953C7.85629 9.23352 8.12962 8.78719 8.57463 8.34251C9.0193 7.89768 9.46564 7.62434 9.99181 7.42C10.5005 7.22217 11.0818 7.08733 11.9335 7.04833Z" /><path fill-rule="evenodd" clip-rule="evenodd" d="M14.5146 8.4417C14.6539 8.44148 14.8038 8.44155 14.9656 8.44162L15.2322 8.4417C17.3683 8.4417 17.6214 8.44936 18.4649 8.4877C19.2449 8.52336 19.6683 8.6537 19.9503 8.7632C20.3236 8.9082 20.5898 9.08154 20.8696 9.36154C21.1496 9.64154 21.323 9.90821 21.4683 10.2815C21.5778 10.5632 21.7083 10.9866 21.7438 11.7666C21.7821 12.6099 21.7905 12.8632 21.7905 14.9983C21.7905 17.1333 21.7821 17.3866 21.7438 18.23C21.7081 19.01 21.5778 19.4333 21.4683 19.715C21.3233 20.0883 21.1496 20.3542 20.8696 20.634C20.5896 20.914 20.3238 21.0873 19.9503 21.2323C19.6686 21.3423 19.2449 21.4723 18.4649 21.508C17.6216 21.5463 17.3683 21.5547 15.2322 21.5547C13.096 21.5547 12.8429 21.5463 11.9995 21.508C11.2195 21.472 10.7962 21.3417 10.514 21.2322C10.1407 21.0872 9.87401 20.9138 9.594 20.6338C9.314 20.3538 9.14067 20.0878 8.99533 19.7143C8.88583 19.4326 8.75533 19.0093 8.71983 18.2293C8.68149 17.386 8.67383 17.1326 8.67383 14.9963C8.67383 12.8599 8.68149 12.6079 8.71983 11.7646C8.7555 10.9846 8.88583 10.5612 8.99533 10.2792C9.14033 9.90588 9.314 9.63921 9.594 9.35921C9.87401 9.0792 10.1407 8.90587 10.514 8.76053C10.796 8.65053 11.2195 8.52053 11.9995 8.4847C12.7375 8.45136 13.0235 8.44136 14.5146 8.4397V8.4417ZM19.5026 9.77011C18.9726 9.77011 18.5426 10.1996 18.5426 10.7298C18.5426 11.2598 18.9726 11.6898 19.5026 11.6898C20.0326 11.6898 20.4626 11.2598 20.4626 10.7298C20.4626 10.1998 20.0326 9.76978 19.5026 9.76978V9.77011ZM11.1238 15.0002C11.1238 12.7314 12.9632 10.8919 15.232 10.8918C17.5008 10.8918 19.3399 12.7314 19.3399 15.0002C19.3399 17.2691 17.501 19.1078 15.2322 19.1078C12.9633 19.1078 11.1238 17.2691 11.1238 15.0002Z" /><path d="M15.2321 12.3335C16.7048 12.3335 17.8988 13.5273 17.8988 15.0002C17.8988 16.4729 16.7048 17.6669 15.2321 17.6669C13.7593 17.6669 12.5654 16.4729 12.5654 15.0002C12.5654 13.5273 13.7593 12.3335 15.2321 12.3335Z" /></svg></a>
+                </div>
+
+                <div class="footer-contacts">
+                    <div class="footer-address">OOO «Алеф Монтаж», 125319, г. Москва, улица Усиевича, д. 8, ком. 50</div>
+                    <div class="footer-email"><a href="mailto:info@eaerus.ru">info@eaerus.ru</a></div>
+                    <div class="footer-phone"><a href="tel:+74992700511">+7 (499) 270-05-11</a></div>
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="footer-links">
+                    <div class="footer-link"><a href="#">Правила использования материалов</a></div>
+                    <div class="footer-link"><a href="#">Пользовательское соглашение</a></div>
+                </div>
+
+                <div class="footer-copyrights">Все права защищены. EAE Russia.<br /> Использование материалов разрешено только при наличии активной ссылки на источник.</div>
+
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/jquery.mask.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
