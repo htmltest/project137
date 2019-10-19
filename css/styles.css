@@ -155,32 +155,62 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .logo {position:absolute; left:50%; top:16px; width:40px; height:47px; margin:0 0 0 -20px; background:url(../images/logo.png) no-repeat}
 .logo a {display:block; position:absolute; left:0; top:0; right:0; bottom:0}
 
-.header-menu {position:absolute; font-size:11px; line-height:78px; text-transform:uppercase; font-weight:bold; letter-spacing:0.05em}
-.header-menu-main {right:50%; top:0; margin-right:85px}
-.header-menu-add {left:50%; top:0; margin-left:70px}
+.header-menu {position:absolute; font-size:11px; line-height:28px; text-transform:uppercase; font-weight:bold; letter-spacing:0.05em}
+.header-menu-main {right:50%; top:26px; margin-right:70px}
+.header-menu-add {left:50%; top:26px; margin-left:60px}
 .header-menu ul {margin:0; padding:0; list-style:none}
-.header-menu ul li {float:left; margin:0 0 0 33px; padding:0; position:relative}
+.header-menu ul li {float:left; margin:0 0 0 13px; padding:0; position:relative}
+.header-menu ul li.with-submenu {margin-right:-13px}
 .header-menu ul li:first-child {margin:0}
 .header-menu ul li::before {display:none}
-.header-menu ul li a {color:#ececec; text-decoration:none; display:block; position:relative}
-.header-menu ul li.with-submenu:hover::after {content:""; display:block; position:absolute; left:50%; top:100%; margin:-9px 0 0 -10px; width:19px; height:19px; background:#fff; border-left:1px solid #e1e1e1; border-top:1px solid #e1e1e1; transform:rotate(45deg)}
-.header-menu ul li.with-submenu a::before {content:""; display:block; position:absolute; right:-20px; top:0; width:20px; bottom:0; background:url(../images/header-menu-arrow.svg) no-repeat right center}
-.header-menu ul li:hover a {color:#fff}
+.header-menu ul li a {color:#fff; text-decoration:none; display:block; position:relative; padding:0 10px}
+.header-menu ul li.with-submenu a {padding-right:23px}
+.header-menu ul li.with-submenu a::before {content:""; display:block; position:absolute; right:0; top:0; width:23px; bottom:0; background:url(../images/header-menu-arrow.svg) no-repeat 8px center}
+.header-menu ul li:hover a {background:#838383}
 .header-menu ul li.active a {color:#fff; text-decoration:underline}
-.header-menu ul li ul {display:none; position:absolute; left:-26px; top:100%; padding:10px 0; white-space:nowrap; line-height:32px; font-size:12px; background:#fff; border:1px solid #e1e1e1}
+.header-menu ul li ul {display:none; position:absolute; left:50%; transform:translateX(-50%); top:100%; margin-top:13px; padding:10px 0; white-space:nowrap; line-height:32px; font-size:12px; background:#fff; border:1px solid #e1e1e1}
+.header-menu ul li ul::before {content:""; display:block; position:absolute; left:0; top:-14px; right:0; height:14px; background:rgba(../images/blank.gif)}
+.header-menu ul li ul::after {content:""; display:block; position:absolute; left:50%; top:-10px; margin:0 0 0 -12px; width:0; height:0; border-left:12px solid transparent; border-bottom:10px solid #fff; border-right:12px solid transparent}
 .header-menu ul li:hover ul {display:block}
 .header-menu ul li ul li {float:none; margin:0}
 .header-menu ul li ul li a,
 .header-menu ul li:hover ul li a,
-.header-menu ul li.active ul li a {color:#818181; padding:0 25px; text-decoration:none; z-index:1}
+.header-menu ul li.active ul li a {color:#818181; padding:0 25px; text-decoration:none; z-index:1; background:none}
+.header-menu ul li.with-submenu ul li a {padding-right:25px}
 .header-menu ul li.with-submenu ul li a::before {display:none}
-.header-menu ul li ul li a:hover {background:#e1e1e1}
+.header-menu ul li ul li.with-subsubmenu a::after {content:""; display:block; position:absolute; right:10px; top:50%; margin-top:-6px; width:7px; height:12px; background:url(../images/subsubmenu.svg) no-repeat}
+.header-menu ul li ul li:hover a {background:#e1e1e1}
+.header-menu ul li:hover ul li ul {display:none; left:100%; transform:none; top:-11px; margin-top:0}
+.header-menu ul li:hover ul li ul::after {display:none}
+.header-menu ul li:hover ul li:hover ul {display:block}
+.header-menu ul li ul li:hover ul li a {background:none}
+.header-menu ul li ul li:hover ul li a:hover {background:#e1e1e1}
+.header-menu ul li ul li.with-subsubmenu ul li a::after {display:none}
 
 .header-search {float:right; position:relative; margin:31px 0 0 0}
 .header-search-link {display:block; line-height:0}
 .header-search-link svg {display:block}
 .header-search-link path {fill:#fff; transition:all 0.2s}
 .header-search-link:hover path {fill:#ececec}
+
+.search-open,
+.search-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.header-search-window {display:none; position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:rgba(255, 255, 255, 0.91); padding:112px 0 0 0}
+.search-open .header-search-window {display:block}
+.header-search-window-close {display:block; position:absolute; width:22px; height:22px; right:22px; top:32px}
+.header-search-window-close::before,
+.header-search-window-close::after {content:""; display:block; position:absolute; left:0; top:50%; right:0; height:2px; margin:-1px 0 0 0; background:#000; transition:all 0.2s}
+.header-search-window-close::before {transform:rotate(-45deg)}
+.header-search-window-close::after {transform:rotate(45deg)}
+.header-search-window-close:hover::before,
+.header-search-window-close:hover::after {background:#323539}
+
+.header-search-window form {width:440px; margin:0 auto; padding:0 145px 0 40px; position:relative; background:#fff url(../images/404-search.svg) no-repeat 13px center; height:40px; border:1px solid #bfbfbf; border-radius:3px}
+.header-search-input input {position:relative; border:none; font:14px/22px OpenSans, sans-serif; color:#000; vertical-align:top; margin:0; padding:8px 0; width:100%; height:38px; box-sizing:border-box; outline:none; border-radius:0; background:transparent; -webkit-appearance:none}
+.header-search-input label.error {display:none !important}
+.header-search-submit {position:absolute; right:0; top:0; width:132px}
+.header-search-submit .btn {height:38px; line-height:38px; padding:0; width:100%}
 
 .breadcrumbs {font-size:12px; color:#818181; margin:18px 0 0 0}
 .breadcrumbs a {color:#818181}
@@ -215,6 +245,7 @@ hr+.content-cols {margin-top:-20px}
 .slider-item-link {margin:27px 0 0 0}
 .slider-item-link a {display:inline-block; vertical-align:top; padding:0 48px 0 27px; height:35px; background:#18191b; color:#fff; font-size:14px; line-height:35px; letter-spacing:0; border-radius:18px; position:relative}
 .slider-item-link a::after {content:""; display:block; width:9px; height:14px; position:absolute; right:19px; top:50%; margin-top:-7px; background:url(../images/slider-link.svg) no-repeat}
+.slider-item-link a:hover {background:#323539}
 .slider-list .slick-prev,
 .slider-list .slick-next {display:block; position:absolute; z-index:2; top:50%; width:26px; height:47px; border:none; border-radius:0; margin:-24px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transparent}
 .slider-list .slick-prev {left:60px}
@@ -515,6 +546,7 @@ h2+.grms-complex {border-top:1px solid #ddd; padding:40px 0 0 0}
 .grms-solution-text > *:last-child {margin-bottom:0}
 .grms-solution-photo {display:table-cell; vertical-align:middle; line-height:0; width:50%; text-align:center}
 .grms-solution-wrap hr {margin:22px 0}
+.grms-solution-photo video {display:block; width:100%}
 
 .grms-products {margin:120px -7px 0 -7px; position:relative; font-size:0; line-height:0; letter-spacing:-1px; overflow:hidden; white-space:nowrap}
 hr+.grms-products {margin-top:-36px}
@@ -668,3 +700,39 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 .footer-link a:hover {opacity:1}
 
 .footer-copyrights {float:right; text-align:right; font-size:12px; line-height:20px; color:#fff; opacity:0.5; margin:8px 0 0 0}
+
+.window-open,
+.window-open body {overflow:hidden; position:fixed; left:0; top:0; right:0; bottom:0}
+
+.window {position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:rgba(255, 255, 255, 0.91)}
+.window-loading {position:absolute; left:50%; top:50%; width:24px; height:24px; margin:-12px 0 0 -12px; background:url(../images/loading.gif)}
+.window-container {position:absolute; z-index:99999; left:50%; top:50%; transition:transform 0.15s, opacity 0.15s}
+.window-container-preload {transform:scale(0.5); opacity:0}
+.window-content {position:relative; background:#fff}
+.window-close {display:block; position:absolute; width:22px; height:22px; right:40px; top:40px}
+.window-close::before,
+.window-close::after {content:""; display:block; position:absolute; left:0; top:50%; right:0; height:2px; margin:-1px 0 0 0; background:#000; transition:all 0.2s}
+.window-close::before {transform:rotate(-45deg)}
+.window-close::after {transform:rotate(45deg)}
+.window-close:hover::before,
+.window-close:hover::after {background:#323539}
+
+.window-gallery {width:100vw; position:relative; height:100vh}
+.window-gallery::before {content:""; display:block; position:absolute; left:190px; top:40px; bottom:40px; width:1px; background:#e1e1e1}
+.window-gallery-preview {position:absolute; left:0; top:50%; transform:translateY(-50%); width:190px; overflow:auto; max-height:calc(100vh - 80px)}
+.window-gallery-preview-inner {width:82px; margin:0 auto}
+.window-gallery-preview-item {margin:16px 0 0 0}
+.window-gallery-preview-item:first-child {margin:0}
+.window-gallery-preview-item a {display:block; width:100%; position:relative; background:#fff; text-align:center; overflow:hidden; line-height:80px; height:82px}
+.window-gallery-preview-item a::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; border:1px solid #fff; border-radius:0; transition:all 0.2s}
+.window-gallery-preview-item a:hover::after {border-color:rgba(255, 0, 0, 0.1)}
+.window-gallery-preview-item.active a::after {border-color:rgba(255, 0, 0, 0.2)}
+.window-gallery-preview-item img {max-height:60px; max-width:60px; vertical-align:middle}
+.window-gallery-preview+.window-gallery-big {margin:0 0 0 190px}
+.window-gallery-big-inner {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; overflow:hidden}
+.window-gallery-big-inner.slick-initialized {overflow:visible}
+.window-gallery-big-item {display:inline-block; vertical-align:top; width:100%; text-align:center; line-height:calc(100vh); height:100vh}
+.window-gallery-big-item-inner {max-width:476px; display:inline-block; vertical-align:middle; line-height:0}
+.window-gallery-big-item img {display:block; margin:0 auto; max-height:70vh}
+.window-gallery-big-item-title {text-align:left; font-size:15px; line-height:22px; letter-spacing:0; color:#696969; white-space:normal; padding:64px 0 0 0}
+.window-gallery-big-inner .slick-slide .window-gallery-big-item img {display:block}

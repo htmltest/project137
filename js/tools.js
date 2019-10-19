@@ -123,6 +123,117 @@ $(document).ready(function() {
         adaptiveHeight: true
     });
 
+    $('body').on('click', '.window-link', function(e) {
+        var curLink = $(this);
+        windowOpen(curLink.attr('href'));
+        e.preventDefault();
+    });
+
+    $('body').on('keyup', function(e) {
+        if (e.keyCode == 27) {
+            windowClose();
+        }
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).hasClass('window')) {
+            windowClose();
+        }
+    });
+
+    $(window).resize(function() {
+        windowPosition();
+    });
+
+    $('body').on('click', '.window-close', function(e) {
+        windowClose();
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.product-about-gallery-item a', function(e) {
+        if ($('.window').length > 0) {
+            windowClose();
+        }
+
+        var curPadding = $('.wrapper').width();
+        var curWidth = $(window).width();
+        if (curWidth < 480) {
+            curWidth = 480;
+        }
+        var curScroll = $(window).scrollTop();
+        $('html').addClass('window-open');
+        curPadding = $('.wrapper').width() - curPadding;
+        $('body').css({'margin-right': curPadding + 'px'});
+        $('body').append('<div class="window"><div class="window-loading"></div></div>')
+        $('.wrapper').css({'top': -curScroll});
+        $('.wrapper').data('curScroll', curScroll);
+        $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+
+        var galleryHtml = '<div class="window-gallery">';
+
+        if ($('.product-about-gallery-item a').length > 1) {
+            galleryHtml += '<div class="window-gallery-preview"><div class="window-gallery-preview-inner">';
+            $('.product-about-gallery-item a').each(function() {
+                galleryHtml += '<div class="window-gallery-preview-item"><a href="#"><img src="' + $(this).find('img').attr('src') + '" alt="" /></a></div>';
+            });
+            galleryHtml += '</div></div>';
+        }
+
+        galleryHtml += '<div class="window-gallery-big"><div class="window-gallery-big-inner">';
+        $('.product-about-gallery-item a').each(function() {
+            galleryHtml += '<div class="window-gallery-big-item"><div class="window-gallery-big-item-inner"><img src="' + $(this).attr('href') + '" alt="" />';
+            if ($(this).attr('data-title')) {
+                galleryHtml += '<div class="window-gallery-big-item-title">' + $(this).attr('data-title') + '</div>';
+            }
+            galleryHtml += '</div></div>';
+        });
+        galleryHtml += '</div></div>';
+
+        galleryHtml += '</div>';
+
+        $('.window').append('<div class="window-container window-container-preload"><div class="window-content">' + galleryHtml + '<a href="#" class="window-close"></a></div></div>')
+        windowPosition();
+        $('.window-container-preload').removeClass('window-container-preload');
+
+        $('.window-gallery-preview').mCustomScrollbar({
+            axis: 'y'
+        });
+
+        var curIndex = $('.product-about-gallery-item a').index($(this));
+        $('.window-gallery-preview-item').eq(curIndex).addClass('active');
+
+        $('.window-gallery-preview-item a').click(function(e) {
+            if (!$(this).parent().hasClass('active')) {
+                var newIndex = $('.window-gallery-preview-item a').index($(this));
+                $('.window-gallery-preview-item.active').removeClass('active');
+                $('.window-gallery-preview-item').eq(newIndex).addClass('active');
+                $('.window-gallery-big-inner').slick('slickGoTo', newIndex);
+            }
+            e.preventDefault();
+        });
+
+        $('.window-gallery-big-inner').slick({
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            initialSlide: curIndex,
+            arrows: false,
+            dots: false
+       });
+
+        e.preventDefault();
+    });
+
+    $('.header-search-link').click(function(e) {
+        $('html').addClass('search-open');
+        e.preventDefault();
+    });
+
+    $('.header-search-window-close').click(function(e) {
+        $('html').removeClass('search-open');
+        e.preventDefault();
+    });
+
 });
 
 $(window).on('resize', function() {
@@ -198,3 +309,65 @@ $(window).on('load resize scroll', function() {
         });
 	}
 });
+
+function windowOpen(linkWindow, dataWindow) {
+    if ($('.window').length > 0) {
+        windowClose();
+    }
+
+    var curPadding = $('.wrapper').width();
+    var curWidth = $(window).width();
+    if (curWidth < 480) {
+        curWidth = 480;
+    }
+    var curScroll = $(window).scrollTop();
+    $('html').addClass('window-open');
+    curPadding = $('.wrapper').width() - curPadding;
+    $('body').css({'margin-right': curPadding + 'px'});
+    $('body').append('<div class="window"><div class="window-loading"></div></div>')
+    $('.wrapper').css({'top': -curScroll});
+    $('.wrapper').data('curScroll', curScroll);
+    $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+
+    $.ajax({
+        type: 'POST',
+        url: linkWindow,
+        processData: false,
+        contentType: false,
+        dataType: 'html',
+        data: dataWindow,
+        cache: false
+    }).done(function(html) {
+        $('.window').append('<div class="window-container window-container-preload"><div class="window-content">' + html + '<a href="#" class="window-close"></a></div></div>')
+
+        windowPosition();
+
+        $('.window-container-preload').removeClass('window-container-preload');
+
+        $('.window form').each(function() {
+            initForm($(this));
+        });
+    });
+}
+
+function windowPosition() {
+    if ($('.window').length > 0) {
+        $('.window-container').css({'left': '50%', 'margin-left': -$('.window-container').width() / 2});
+
+        $('.window-container').css({'top': '50%', 'margin-top': -$('.window-container').height() / 2});
+        if ($('.window-container').height() > $('.window').height()) {
+            $('.window-container').css({'top': '0', 'margin-top': 0});
+        }
+    }
+}
+
+function windowClose() {
+    if ($('.window').length > 0) {
+        $('.window').remove();
+        $('html').removeClass('window-open');
+        $('body').css({'margin-right': 0});
+        $('.wrapper').css({'top': 0});
+        $(window).scrollTop($('.wrapper').data('curScroll'));
+        $('meta[name="viewport"]').attr('content', 'width=device-width');
+    }
+}
