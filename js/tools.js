@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+    $('.table-scroll').mCustomScrollbar({
+        axis: 'x'
+    });
+
     $.validator.addMethod('phoneRU',
         function(phone_number, element) {
             return this.optional(element) || phone_number.match(/^\+7 \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/);
@@ -42,7 +46,15 @@ $(document).ready(function() {
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev"><svg width="26" height="47" viewBox="0 0 26 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 2L3 23.5L24 45" stroke-width="3"/></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg width="26" height="47" viewBox="0 0 26 47" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 45L23 23.5L2 2" stroke-width="3"/></svg></button>',
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1159,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.main-news-container').slick({
@@ -51,7 +63,17 @@ $(document).ready(function() {
         slidesToScroll: 4,
         prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1159,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('body').on('click', '.form-reset input', function() {
@@ -67,12 +89,28 @@ $(document).ready(function() {
         }, 100);
     });
 
-    $('body').on('click', '.about-menu a', function(e) {
+    $('body').on('click', '.about-menu ul a', function(e) {
         var curBlock = $($(this).attr('href'));
         if (curBlock.length > 0) {
+            $('.about-menu').removeClass('open');
             $('html, body').animate({'scrollTop': curBlock.offset().top});
             e.preventDefault();
         }
+    });
+
+    $('body').on('click', '.about-menu-current a', function(e) {
+        $('.about-menu').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.about-menu').length == 0) {
+            $('.about-menu').removeClass('open');
+        }
+    });
+
+    $('.about-menu-current').each(function() {
+        $(this).html($('.about-menu ul li:first').html());
     });
 
     $('body').on('click', '.faq-item-title', function(e) {
@@ -90,8 +128,33 @@ $(document).ready(function() {
             var curIndex = curTabs.find('.grms-tabs-menu ul li').index(curLi);
             curTabs.find('.grms-tabs-content.active').removeClass('active');
             curTabs.find('.grms-tabs-content').eq(curIndex).addClass('active');
+            curTabs.find('.grms-tabs-menu-current').html($(this).html());
         }
+        $('.grms-tabs-menu').removeClass('open');
         e.preventDefault();
+    });
+
+    $('body').on('click', '.grms-tabs-menu-current', function(e) {
+        var curTabs = $(this).parents().filter('.grms-tabs');
+        curTabs.find('.grms-tabs-menu').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.grms-tabs-menu').length == 0) {
+            $('.grms-tabs-menu').removeClass('open');
+        }
+    });
+
+    $('body').on('click', '.product-side h3', function(e) {
+        $('.product-side').toggleClass('open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.product-side').length == 0) {
+            $('.product-side').removeClass('open');
+        }
     });
 
     $('.grms-products').slick({
@@ -100,7 +163,18 @@ $(document).ready(function() {
         slidesToScroll: 4,
         prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
-        dots: true
+        dots: true,
+        responsive: [
+            {
+                breakpoint: 1159,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    variableWidth: true,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.valesa-about-gallery-list').slick({
@@ -110,7 +184,15 @@ $(document).ready(function() {
         prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
         nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
         dots: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1159,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.product-about-gallery-list').slick({
@@ -195,9 +277,7 @@ $(document).ready(function() {
         windowPosition();
         $('.window-container-preload').removeClass('window-container-preload');
 
-        $('.window-gallery-preview').mCustomScrollbar({
-            axis: 'y'
-        });
+        $('.window-gallery-preview').mCustomScrollbar();
 
         var curIndex = $('.product-about-gallery-item a').index($(this));
         $('.window-gallery-preview-item').eq(curIndex).addClass('active');
@@ -232,6 +312,32 @@ $(document).ready(function() {
     $('.header-search-window-close').click(function(e) {
         $('html').removeClass('search-open');
         e.preventDefault();
+    });
+
+    $('.mobile-menu-link').click(function(e) {
+        $('html').toggleClass('mobile-menu-open');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if (!$(e.target).hasClass('mobile-menu-link') && $(e.target).parents().filter('.mobile-menu').length == 0) {
+            $('html').removeClass('mobile-menu-open');
+        }
+    });
+
+    $('.mobile-menu ul li').each(function() {
+        var curLi = $(this);
+        if (curLi.find('ul').length > 0) {
+            curLi.addClass('with-submenu');
+        }
+    });
+
+    $('.mobile-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (curLi.find('ul').length > 0) {
+            curLi.toggleClass('open');
+            e.preventDefault();
+        }
     });
 
 });
@@ -306,6 +412,9 @@ $(window).on('load resize scroll', function() {
                     $(this).addClass('active');
                 }
             }
+        });
+        $('.about-menu-current').each(function() {
+            $(this).html($('.about-menu ul li.active').html());
         });
 	}
 });

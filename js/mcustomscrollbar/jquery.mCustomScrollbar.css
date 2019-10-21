@@ -153,7 +153,7 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal{
 		width: auto;
-		height: 20px;
+		height: 3px;
 		top: auto;
 		right: 0;
 		bottom: 0;
@@ -167,7 +167,7 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{
 		width: 100%;
-		height: 20px;
+		height: 3px;
 		margin: 0;
 	}
 
@@ -179,8 +179,8 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
 		width: 100%;
-		height: 4px;
-		margin: 7px auto;
+		height: 3px;
+		margin: 0;
 	}
 
 	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,
