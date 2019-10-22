@@ -277,7 +277,15 @@ $(document).ready(function() {
         windowPosition();
         $('.window-container-preload').removeClass('window-container-preload');
 
-        $('.window-gallery-preview').mCustomScrollbar();
+        if ($(window).width() > 1159) {
+            $('.window-gallery-preview').mCustomScrollbar({
+                axis: 'y'
+            });
+        } else {
+            $('.window-gallery-preview').mCustomScrollbar({
+                axis: 'x'
+            });
+        }
 
         var curIndex = $('.product-about-gallery-item a').index($(this));
         $('.window-gallery-preview-item').eq(curIndex).addClass('active');
@@ -338,6 +346,73 @@ $(document).ready(function() {
             curLi.toggleClass('open');
             e.preventDefault();
         }
+    });
+
+    $('.reference-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.reference-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+            var curFilter = curLi.attr('data-filter');
+            $('.reference-item').stop(true, true);
+            if (curFilter == '*') {
+                $('.reference-item').fadeIn(200);
+            } else {
+                $('.reference-item[data-filter="' + curFilter + '"]').fadeIn(200);
+                $('.reference-item[data-filter!="' + curFilter + '"]').fadeOut(200);
+            }
+            $('.reference-menu-current').html($(this).html());
+        }
+        $('.reference-menu').removeClass('open');
+        e.preventDefault();
+    });
+
+    $('.reference-menu-current').click(function() {
+        $('.reference-menu').toggleClass('open');
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.reference-menu').length == 0) {
+            $('html').removeClass('reference-open');
+        }
+    });
+
+    $('.reference-item a').click(function(e) {
+        if ($('.window').length > 0) {
+            windowClose();
+        }
+
+        var curPadding = $('.wrapper').width();
+        var curWidth = $(window).width();
+        if (curWidth < 480) {
+            curWidth = 480;
+        }
+        var curScroll = $(window).scrollTop();
+        $('html').addClass('window-open');
+        curPadding = $('.wrapper').width() - curPadding;
+        $('body').css({'margin-right': curPadding + 'px'});
+        $('body').append('<div class="window"><div class="window-loading"></div></div>')
+        $('.wrapper').css({'top': -curScroll});
+        $('.wrapper').data('curScroll', curScroll);
+        $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
+
+        var galleryHtml = '<div class="window-lightbox">';
+
+        galleryHtml += '<div class="window-gallery-big"><div class="window-gallery-big-inner">';
+        galleryHtml += '<div class="window-gallery-big-item"><div class="window-gallery-big-item-inner"><img src="' + $(this).attr('href') + '" alt="" />';
+        if ($(this).attr('data-title')) {
+            galleryHtml += '<div class="window-gallery-big-item-title">' + $(this).attr('data-title') + '</div>';
+        }
+        galleryHtml += '</div></div>';
+        galleryHtml += '</div></div>';
+
+        galleryHtml += '</div>';
+
+        $('.window').append('<div class="window-container window-container-preload"><div class="window-content">' + galleryHtml + '<a href="#" class="window-close"></a></div></div>')
+        windowPosition();
+        $('.window-container-preload').removeClass('window-container-preload');
+
+        e.preventDefault();
     });
 
 });

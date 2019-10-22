@@ -621,6 +621,7 @@ h4+.download-catalogues-link {margin-top:-10px}
 }
 
 .reference-menu {border-bottom:1px solid #ddd; font-size:18px; line-height:21px; margin:40px 0 0 0}
+.reference-menu-current {display:none}
 .reference-menu ul {margin:0; padding:0; list-style:none}
 .reference-menu ul::after {content:""; display:block; clear:both}
 .reference-menu ul li {float:left; margin:0 0 0 50px; padding:0}
@@ -631,12 +632,31 @@ h4+.download-catalogues-link {margin-top:-10px}
 .reference-menu ul li a {display:block; color:#696969; padding:0 0 7px 0}
 .reference-menu ul li.active a {font-weight:bold}
 
+@media screen and (max-width:1159px) {
+    .reference-menu {border-bottom:none; position:relative}
+    .reference-menu-current {display:block; border:1px solid #d9d9d9; padding:0 60px 0 20px; position:relative; cursor:pointer; cursor:pointer; font-size:19px; line-height:44px; height:46px}
+    .reference-menu-current::after {content:""; display:block; width:19px; height:11px; position:absolute; right:14px; top:17px; background:url(../images/about-menu-mobile.svg) no-repeat}
+    .reference-menu.open .reference-menu-current::after {transform:rotate(-180deg)}
+    .reference-menu ul {display:none; background:#fff; position:absolute; left:0; top:100%; width:100%; z-index:99; margin-top:-1px; border:1px solid #d9d9d9}
+    .reference-menu.open ul {display:block}
+    .reference-menu ul li {float:none; border-top:1px solid #d9d9d9; margin:0}
+    .reference-menu ul li:first-child {border-top:none}
+    .reference-menu ul li a {display:block; padding:0 60px 0 20px; color:#404040; font-size:19px; line-height:44px}
+    .reference-menu ul li.active a {font-weight:normal}
+    .reference-menu ul li.active::after {display:none}
+}
+
 .reference {margin:35px -10px 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
 .reference-item {display:inline-block; vertical-align:top; width:33.33%; padding:10px}
-.reference-item a {display:block; position:relative}
-.reference-item img {display:block; width:100%}
+.reference-item a {display:block; position:relative; overflow:hidden}
+.reference-item img {display:block; width:100%; transition:all 0.2s}
+.reference-item a:hover img {transform:scale(1.1)}
 .reference-item span {display:block; position:absolute; left:50%; bottom:30px; max-width:calc(100% - 20px); padding:0 20px; font-size:14px; line-height:40px; font-weight:bold; letter-spacing:0; color:#fff; text-align:center; transform:translateX(-50%); border-radius:3px; background:#898989; transition:all 0.2s}
 .reference-item a:hover span {background:#656565}
+
+@media screen and (max-width:1159px) {
+    .reference-item {width:100%}
+}
 
 .faq {max-width:632px; margin:0 auto}
 .faq-item {margin:9px 0; border:1px solid #d9d9d9; transition:margin 0.2s}
@@ -1159,6 +1179,7 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 .window-close:hover::after {background:#323539}
 
 .window-gallery {width:100vw; position:relative; height:100vh}
+.window-lightbox {width:100vw; position:relative; height:100vh}
 .window-gallery::before {content:""; display:block; position:absolute; left:190px; top:40px; bottom:40px; width:1px; background:#e1e1e1}
 .window-gallery-preview {position:absolute; left:0; top:50%; transform:translateY(-50%); width:190px; overflow:auto; max-height:calc(100vh - 80px)}
 .window-gallery-preview-inner {width:82px; margin:0 auto}
@@ -1174,13 +1195,14 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 .window-gallery-big-inner.slick-initialized {overflow:visible}
 .window-gallery-big-item {display:inline-block; vertical-align:top; width:100%; text-align:center; line-height:calc(100vh); height:100vh}
 .window-gallery-big-item-inner {max-width:476px; display:inline-block; vertical-align:middle; line-height:0}
+.window-lightbox .window-gallery-big-item-inner {max-width:90%}
 .window-gallery-big-item img {display:block; margin:0 auto; max-height:70vh}
 .window-gallery-big-item-title {text-align:left; font-size:15px; line-height:22px; letter-spacing:0; color:#696969; white-space:normal; padding:64px 0 0 0}
 .window-gallery-big-inner .slick-slide .window-gallery-big-item img {display:block}
 
 @media screen and (max-width:1159px) {
     .window-gallery::before {display:none}
-    .window-gallery-preview {top:auto; bottom:27px; transform:translateX(-50%); width:auto; left:50%; max-height:auto; max-width:calc(100vw - 80px)}
+    .window-gallery-preview {top:auto; bottom:27px; transform:none; left:40px; max-height:none; right:40px; width:auto; text-align:center}
     .window-gallery-preview+.window-gallery-big {margin:0; max-height:calc(100vh - 230px)}
     .window-gallery-preview-inner {width:auto; margin:0; white-space:nowrap}
     .window-gallery-preview-item {display:inline-block; vertical-align:top; margin:0 0 0 10px; width:82px}
