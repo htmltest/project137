@@ -218,7 +218,7 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .header-social a:first-child {margin:0}
 .header-social a svg {display:block}
 .header-social a path {fill:#fff; transition:all 0.2s}
-.header-social a:hover path {fill:#ececec}
+.header-social a:hover path {fill:#e0e0e0}
 
 @media screen and (max-width:1159px) {
     .header-social {display:none}
@@ -244,7 +244,7 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .header-menu ul li.with-submenu a::before {content:""; display:block; position:absolute; right:0; top:0; width:23px; bottom:0; background:url(../images/header-menu-arrow.svg) no-repeat 8px center}
 .header-menu ul li:hover a {background:#838383}
 .header-menu ul li.active a {color:#fff; text-decoration:underline}
-.header-menu ul li ul {display:none; position:absolute; left:50%; transform:translateX(-50%); top:100%; margin-top:13px; padding:10px 0; white-space:nowrap; line-height:32px; font-size:12px; background:#fff; border:1px solid #e1e1e1}
+.header-menu ul li ul {display:none; position:absolute; left:50%; transform:translateX(-50%); top:100%; margin-top:13px; padding:10px 0; white-space:nowrap; line-height:32px; font-size:12px; background:#fff; border:1px solid #e1e1e1; box-shadow:0px 4px 30px rgba(0, 0, 0, 0.1)}
 .header-menu ul li ul::before {content:""; display:block; position:absolute; left:0; top:-14px; right:0; height:14px; background:rgba(../images/blank.gif)}
 .header-menu ul li ul::after {content:""; display:block; position:absolute; left:50%; top:-10px; margin:0 0 0 -12px; width:0; height:0; border-left:12px solid transparent; border-bottom:10px solid #fff; border-right:12px solid transparent}
 .header-menu ul li:hover ul {display:block}
@@ -255,12 +255,12 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .header-menu ul li.with-submenu ul li a {padding-right:25px}
 .header-menu ul li.with-submenu ul li a::before {display:none}
 .header-menu ul li ul li.with-subsubmenu a::after {content:""; display:block; position:absolute; right:10px; top:50%; margin-top:-6px; width:7px; height:12px; background:url(../images/subsubmenu.svg) no-repeat}
-.header-menu ul li ul li:hover a {background:#e1e1e1}
+.header-menu ul li ul li:hover a {background:#f3f3f3}
 .header-menu ul li:hover ul li ul {display:none; left:100%; transform:none; top:-11px; margin-top:0}
 .header-menu ul li:hover ul li ul::after {display:none}
 .header-menu ul li:hover ul li:hover ul {display:block}
 .header-menu ul li ul li:hover ul li a {background:none}
-.header-menu ul li ul li:hover ul li a:hover {background:#e1e1e1}
+.header-menu ul li ul li:hover ul li a:hover {background:#f3f3f3}
 .header-menu ul li ul li.with-subsubmenu ul li a::after {display:none}
 
 @media screen and (max-width:1159px) {
@@ -289,7 +289,7 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 @media screen and (max-width:1159px) {
     .header-search {margin:32px 29px 0 0}
     .header-search-link svg {width:19px; height:19px}
-    .mobile-menu-open .header-search {z-index:199; margin-right:245px}
+    .mobile-menu-open .header-search {z-index:199; margin-right:307px}
 }
 
 .search-open,
@@ -315,18 +315,21 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .mobile-menu {display:none}
 
 @media screen and (max-width:1159px) {
-    .mobile-menu-open .mobile-menu {display:block; z-index:198; position:fixed; right:0; top:0; bottom:0; width:339px; background:#7f7f7f; box-shadow:0px 0px 48px rgba(0, 0, 0, 0.1)}
-    .mobile-menu-container {position:absolute; left:0; top:83px; right:0; bottom:0; overflow:auto}
-    .mobile-menu-content {padding:0 35px}
+    .mobile-menu-open .mobile-menu {display:block; z-index:198; position:fixed; right:0; top:0; bottom:0; width:389px; background:#7f7f7f; box-shadow:0px 0px 48px rgba(0, 0, 0, 0.1)}
+    .mobile-menu-container {position:absolute; left:0; top:91px; right:0; bottom:0; overflow:auto}
     .mobile-menu-content ul {margin:0; padding:0; list-style:none; font-weight:bold; font-size:16px; line-height:22px; letter-spacing:0.05em; text-transform:uppercase}
-    .mobile-menu-content ul li {margin:26px 0; padding:0}
+    .mobile-menu-content ul li {margin:10px 0; padding:0}
     .mobile-menu-content ul li::before {display:none}
-    .mobile-menu-content ul li a {color:#fff}
+    .mobile-menu-content ul li a {color:#fff; display:block; padding:8px 30px}
+    .mobile-menu-content ul li.active > a {background:rgba(196, 196, 196, 0.24)}
     .mobile-menu-content ul li.with-submenu > a::after {content:""; display:inline-block; vertical-align:middle; width:14px; height:9px; background:url(../images/mobile-menu-submenu.svg) no-repeat; margin:-2px 0 0 10px}
     .mobile-menu-content ul li.with-submenu.open > a::after {transform:rotate(-180deg)}
-    .mobile-menu-content ul li ul {display:none; line-height:27px; text-transform:none; font-weight:600; padding:4px 0 11px 20px}
+    .mobile-menu-content ul li ul {display:none; line-height:22px; text-transform:none; font-weight:normal; padding:17px 40px 9px 50px}
     .mobile-menu-content ul li.open > ul {display:block}
-    .mobile-menu-content ul li ul li {margin:21px 0}
+    .mobile-menu-content ul li ul li {margin:0 0 26px 0}
+    .mobile-menu-content ul li ul li a {padding:0}
+    .mobile-menu-content ul li ul li ul {padding:31px 0 0 21px; position:relative}
+    .mobile-menu-content ul li ul li ul::before {content:""; display:block; position:absolute; left:0; top:36px; bottom:5px; width:1px; background:#c4c4c4; opacity:0.7}
 
     .mobile-menu-social {padding:55px 0 52px 35px; line-height:0}
     .mobile-menu-social::after {content:""; display:block; clear:both}
@@ -392,16 +395,24 @@ hr+.content-cols {margin-top:-20px}
 
 .slider {position:relative}
 .slider-list {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
-.slider-item {display:inline-block; vertical-align:top; width:100%}
-.slider-item-inner {display:table; width:100%; background:#000 no-repeat center; background-size:cover; white-space:normal}
+.slider-item {display:inline-block; vertical-align:top; width:100%; position:relative}
+.slider-item-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:#000 no-repeat center; background-size:cover}
+.slider-item-bg-mobile {display:none}
+.slider-item-inner {display:table; width:100%; white-space:normal; position:relative}
 .slider-item-content {display:table-cell; vertical-align:middle; height:492px}
 .slider-item-text {margin:0 0 0 125px; max-width:430px}
+.slider-item-left .slider-item-text {margin:0 0 0 60px; max-width:400px}
+.slider-item-right .slider-item-text {float:right; margin:0 60px 0 0}
 .slider-item-title {font-weight:800; font-size:28px; line-height:38px; color:#fff; text-transform:uppercase; letter-spacing:0.05em}
-.slider-item-descr {font-size:18px; line-height:27px; color:#fff; letter-spacing:0; max-width:260px; margin:18px 0 0 0}
-.slider-item-link {margin:27px 0 0 0}
+.slider-item-title span {background:url(../images/slider-title.png) left -17px}
+.slider-item-title em {font-style:normal; font-weight:600}
+.slider-item-descr {font-size:18px; line-height:27px; color:#fff; letter-spacing:0; margin:23px 0 0 0}
+.slider-item-descr span {background:url(../images/slider-title.png) left -27px}
+.slider-item-link {margin:32px 0 0 0}
+.slider-item-title+.slider-item-link {margin:63px 0 0 0}
 .slider-item-link a {display:inline-block; vertical-align:top; padding:0 48px 0 27px; height:35px; background:#18191b; color:#fff; font-size:14px; line-height:35px; letter-spacing:0; border-radius:18px; position:relative}
 .slider-item-link a::after {content:""; display:block; width:9px; height:14px; position:absolute; right:19px; top:50%; margin-top:-7px; background:url(../images/slider-link.svg) no-repeat}
-.slider-item-link a:hover {background:#323539}
+.slider-item-link a:hover {background:#323539; padding-right:64px}
 .slider-list .slick-prev,
 .slider-list .slick-next {display:block; position:absolute; z-index:2; top:50%; width:26px; height:47px; border:none; border-radius:0; margin:-24px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transparent}
 .slider-list .slick-prev {left:60px}
@@ -420,10 +431,19 @@ hr+.content-cols {margin-top:-20px}
 .slider-list .slick-dots li.slick-active button {background:#969696}
 
 @media screen and (max-width:1159px) {
+    .slider-item-bg {display:none}
+    .slider-item-bg-mobile {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:#000 no-repeat center; background-size:cover}
     .slider-item-content {height:366px}
     .slider-item-text {margin:0; max-width:60%}
+    .slider-item-left .slider-item-text {float:none; margin:0; max-width:none}
+    .slider-item-right .slider-item-text {float:none; margin:0; max-width:none}
     .slider-item-title {font-size:24px; line-height:33px}
-    .slider-item-descr {font-size:17px; line-height:25px}
+    .slider-item-right .slider-item-title {max-width:270px; float:right}
+    .slider-item-title span {background-position:left -19px}
+    .slider-item-title em {font-weight:800}
+    .slider-item-descr {font-size:17px; line-height:25px; margin:10px 0 0 0}
+    .slider-item-link {margin:28px 0 0 0}
+    .slider-item-right .slider-item-link {text-align:center; float:left; width:100%; margin:28px 0 0 0}
 }
 
 .main-solutions {margin:117px 0 0 0}
