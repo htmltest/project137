@@ -1230,3 +1230,18 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
     .window-gallery-big-item img {max-height:40vh}
     .window-gallery-big-item {line-height:calc(100vh - 150px); height:calc(100vh - 150px)}
 }
+
+.catalogue-list {font-size:0; line-height:0; letter-spacing:-1px; margin:0 -10px}
+.catalogue-item {display:inline-block; vertical-align:top; width:33.33%; padding:47px 10px 0 10px}
+.catalogue-item a {display:block; color:#fff; text-decoration:none; text-align:center}
+.catalogue-item-preview {height:288px; line-height:288px; padding:13px 0}
+.catalogue-item-preview img {vertical-align:middle}
+.catalogue-item-title {background:#a4a4a4; border-radius:3px; padding:11px 39px 10px 39px; font-weight:bold; font-size:14px; line-height:19px; letter-spacing:0; position:relative; transition:all 0.2s}
+.catalogue-item a:hover .catalogue-item-title {background:#7d7d7d}
+.catalogue-item-title::after {content:""; display:block; position:absolute; width:9px; height:14px; background:url(../images/catalogue-item-title.svg) no-repeat; background-size:100%; right:20px; top:50%; margin-top:-7px}
+
+@media screen and (max-width:1159px) {
+    .catalogue-list {margin:0}
+    .catalogue-item {display:block; width:auto; padding:60px 0 0 0}
+    .catalogue-item-preview {height:auto; line-height:0; padding:0}
+}
