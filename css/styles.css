@@ -242,8 +242,8 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .header-menu ul li a {color:#fff; text-decoration:none; display:block; position:relative; padding:0 10px}
 .header-menu ul li.with-submenu a {padding-right:23px}
 .header-menu ul li.with-submenu a::before {content:""; display:block; position:absolute; right:0; top:0; width:23px; bottom:0; background:url(../images/header-menu-arrow.svg) no-repeat 8px center}
+.header-menu ul li.active > a {color:#fff; background:rgba(255, 255, 255, 0.13)}
 .header-menu ul li:hover a {background:#838383}
-.header-menu ul li.active a {color:#fff; text-decoration:underline}
 .header-menu ul li ul {display:none; position:absolute; left:50%; transform:translateX(-50%); top:100%; margin-top:13px; padding:10px 0; white-space:nowrap; line-height:32px; font-size:12px; background:#fff; border:1px solid #e1e1e1; box-shadow:0px 4px 30px rgba(0, 0, 0, 0.1)}
 .header-menu ul li ul::before {content:""; display:block; position:absolute; left:0; top:-14px; right:0; height:14px; background:rgba(../images/blank.gif)}
 .header-menu ul li ul::after {content:""; display:block; position:absolute; left:50%; top:-10px; margin:0 0 0 -12px; width:0; height:0; border-left:12px solid transparent; border-bottom:10px solid #fff; border-right:12px solid transparent}
@@ -255,12 +255,14 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
 .header-menu ul li.with-submenu ul li a {padding-right:25px}
 .header-menu ul li.with-submenu ul li a::before {display:none}
 .header-menu ul li ul li.with-subsubmenu a::after {content:""; display:block; position:absolute; right:10px; top:50%; margin-top:-6px; width:7px; height:12px; background:url(../images/subsubmenu.svg) no-repeat}
+.header-menu ul li ul li.active > a {background:#f3f3f3}
 .header-menu ul li ul li:hover a {background:#f3f3f3}
 .header-menu ul li:hover ul li ul {display:none; left:100%; transform:none; top:-11px; margin-top:0}
 .header-menu ul li:hover ul li ul::after {display:none}
 .header-menu ul li:hover ul li:hover ul {display:block}
 .header-menu ul li ul li:hover ul li a {background:none}
 .header-menu ul li ul li:hover ul li a:hover {background:#f3f3f3}
+.header-menu ul li ul li:hover ul li.active > a {background:#f3f3f3}
 .header-menu ul li ul li.with-subsubmenu ul li a::after {display:none}
 
 @media screen and (max-width:1159px) {
@@ -328,8 +330,10 @@ header {background:#a4a4a4; position:relative; z-index:99; height:78px}
     .mobile-menu-content ul li.open > ul {display:block}
     .mobile-menu-content ul li ul li {margin:0 0 26px 0}
     .mobile-menu-content ul li ul li a {padding:0}
+    .mobile-menu-content ul li ul li.active > a {margin:-5px -40px -5px -50px; padding:5px 40px 5px 50px; background:rgba(196, 196, 196, 0.24)}
     .mobile-menu-content ul li ul li ul {padding:31px 0 0 21px; position:relative}
     .mobile-menu-content ul li ul li ul::before {content:""; display:block; position:absolute; left:0; top:36px; bottom:5px; width:1px; background:#c4c4c4; opacity:0.7}
+    .mobile-menu-content ul li ul li ul li.active > a {margin:-5px -40px -5px -21px; padding:5px 40px 5px 21px; background:rgba(196, 196, 196, 0.24)}
 
     .mobile-menu-social {padding:55px 0 52px 35px; line-height:0}
     .mobile-menu-social::after {content:""; display:block; clear:both}
@@ -671,8 +675,9 @@ h4+.download-catalogues-link {margin-top:-10px}
 .reference-item a {display:block; position:relative; overflow:hidden}
 .reference-item img {display:block; width:100%; transition:all 0.2s}
 .reference-item a:hover img {transform:scale(1.1)}
-.reference-item span {display:block; position:absolute; left:50%; bottom:30px; max-width:calc(100% - 20px); padding:0 20px; font-size:14px; line-height:40px; font-weight:bold; letter-spacing:0; color:#fff; text-align:center; transform:translateX(-50%); border-radius:3px; background:#898989; transition:all 0.2s}
-.reference-item a:hover span {background:#656565}
+.reference-item span {display:block; position:absolute; left:24px; bottom:30px; right:24px; text-align:center}
+.reference-item span em {font-style:normal; display:inline-block; vertical-align:bottom; padding:9px 24px 11px 24px; font-size:14px; line-height:19px; font-weight:bold; letter-spacing:0; color:#fff; border-radius:3px; background:#898989; transition:all 0.2s}
+.reference-item a:hover span em {background:#656565}
 
 @media screen and (max-width:1159px) {
     .reference-item {width:100%}
