@@ -676,7 +676,7 @@ h4+.download-catalogues-link {margin-top:-10px}
 .reference-item img {display:block; width:100%; transition:all 0.2s}
 .reference-item a:hover img {transform:scale(1.1)}
 .reference-item span {display:block; position:absolute; left:24px; bottom:30px; right:24px; text-align:center}
-.reference-item span em {font-style:normal; display:inline-block; vertical-align:bottom; padding:9px 24px 11px 24px; font-size:14px; line-height:19px; font-weight:bold; letter-spacing:0; color:#fff; border-radius:3px; background:#898989; transition:all 0.2s}
+.reference-item span em {font-style:normal; display:inline-block; vertical-align:bottom; padding:9px 24px 11px 24px; font-size:14px; line-height:19px; font-weight:bold; letter-spacing:0; color:#fff; border-radius:3px; background:#727272; transition:all 0.2s}
 .reference-item a:hover span em {background:#656565}
 
 @media screen and (max-width:1159px) {
