@@ -1250,3 +1250,38 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
     .catalogue-item {display:block; width:auto; padding:60px 0 0 0}
     .catalogue-item-preview {height:auto; line-height:0; padding:0}
 }
+
+.rosa-thermostats-info {margin:76px 0 200px 0}
+.rosa-thermostats-info::after {content:""; display:block; clear:both}
+.rosa-thermostats-info h2 {margin:0; float:right; width:570px}
+.rosa-thermostats-info-photo {float:left; line-height:0; width:472px}
+.rosa-thermostats-info-list {float:right; width:570px; padding:12px 0 0 0}
+.rosa-thermostats-info-list-item {margin:20px 0 0 0}
+.rosa-thermostats-info-list-item::after {content:""; display:block; clear:both}
+.rosa-thermostats-info-list-item-icon {float:left; width:34px; line-height:0}
+.rosa-thermostats-info-list-item-text {margin:0 0 0 53px; color:#696969; padding:6px 0 0 0}
+
+@media screen and (max-width:1159px) {
+    .rosa-thermostats-info {margin:60px 0 100px 0}
+    .rosa-thermostats-info h2 {float:none; width:auto}
+    .rosa-thermostats-info-photo {float:none; width:auto; margin:46px 0 0 0; text-align:center}
+    .rosa-thermostats-info-list {float:none; width:auto; padding:0}
+}
+
+.rosa-thermostats-add {margin:136px 0 175px 0}
+.rosa-thermostats-add::after {content:""; display:block; clear:both}
+.rosa-thermostats-add-left {float:left; width:668px}
+.rosa-thermostats-add-photo {text-align:right; margin:20px 0 0 0}
+.rosa-thermostats-add-photo:first-child {margin:0}
+.rosa-thermostats-add-right {float:right; width:472px}
+.rosa-thermostats-add-right blockquote {margin-top:0}
+.rosa-thermostats-add-right .rosa-thermostats-add-photo {text-align:left}
+.rosa-thermostats-add-mobile {display:none}
+
+@media screen and (max-width:1159px) {
+    .rosa-thermostats-add {margin:120px 0}
+    .rosa-thermostats-add-left {float:none; width:auto}
+    .rosa-thermostats-add-right {float:none; width:auto}
+    .rosa-thermostats-add-right blockquote {display:none}
+    .rosa-thermostats-add-right blockquote.rosa-thermostats-add-mobile {display:block; margin:32px 0}
+}
