@@ -1331,3 +1331,89 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 }
 
 .oria-thermostats-center {text-align:center; line-height:0; margin:66px 0}
+
+.oria-sockets-style {margin:40px 0 93px 0}
+.oria-sockets-style::after {content:""; display:block; clear:both}
+.oria-sockets-style-gallery {float:left; width:440px; line-height:0}
+.oria-sockets-style-gallery-list {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
+.oria-sockets-style-gallery-list.slick-initialized {overflow:visible}
+.oria-sockets-style-gallery-item {display:inline-block; vertical-align:top; width:100%}
+.oria-sockets-style-gallery-item img {display:block; width:100%}
+.oria-sockets-style-gallery-list .slick-prev,
+.oria-sockets-style-gallery-list .slick-next {display:block; position:absolute; z-index:2; top:200px; width:14px; height:23px; border:none; border-radius:0; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:transparent}
+.oria-sockets-style-gallery-list .slick-prev {left:-41px}
+.oria-sockets-style-gallery-list .slick-next {right:-41px}
+.oria-sockets-style-gallery-list .slick-prev svg,
+.oria-sockets-style-gallery-list .slick-next svg {display:block}
+.oria-sockets-style-gallery-list .slick-prev path,
+.oria-sockets-style-gallery-list .slick-next path {stroke:#b0b0b0; transition:all 0.2s}
+.oria-sockets-style-gallery-list .slick-prev:hover path,
+.oria-sockets-style-gallery-list .slick-next:hover path {stroke:#5a5a5a}
+.oria-sockets-style-gallery-list .slick-dots {margin:0; padding:0; list-style:none; text-align:center; position:absolute; left:0; bottom:4px; right:0}
+.oria-sockets-style-gallery-list .slick-dots li {margin:0 0 0 17px; padding:0; display:inline-block; vertical-align:top; position:relative}
+.oria-sockets-style-gallery-list .slick-dots li::before {display:none}
+.oria-sockets-style-gallery-list .slick-dots li:first-child {margin:0}
+.oria-sockets-style-gallery-list .slick-dots li button {display:block; position:relative; width:14px; height:14px; border-radius:50%; border:none; background:#e3e3e3; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.oria-sockets-style-gallery-list .slick-dots li.slick-active button {background:#bebebe}
+.oria-sockets-style-gallery-list .slick-prev.slick-disabled,
+.oria-sockets-style-gallery-list .slick-next.slick-disabled {display:none !important}
+
+@media screen and (max-width:1159px) {
+    .oria-sockets-style {margin:50px 0 60px 0}
+    .oria-sockets-style-gallery {float:none; width:430px; margin:0 auto}
+}
+
+.oria-sockets-style-container {float:left; margin:0 0 0 152px; width:370px}
+.oria-sockets-style-container h2 {margin-top:0}
+
+@media screen and (max-width:1159px) {
+    .oria-sockets-style-container {float:none; margin:40px 0 0 0; width:auto}
+}
+
+.oria-sockets-video {margin:120px 0; width:100%}
+
+@media screen and (max-width:1159px) {
+    .oria-sockets-video {margin:80px 0}
+}
+
+.oria-sockets-types-menu {margin:45px 0 0 0; border-bottom:1px solid #ddd; position:relative}
+.oria-sockets-types-menu-current {display:none}
+.oria-sockets-types-menu ul {margin:0; padding:0; list-style:none; font-size:18px; line-height:21px}
+.oria-sockets-types-menu ul::after {content:""; display:block; clear:both}
+.oria-sockets-types-menu ul li {float:left; margin:0 0 0 55px; padding:0}
+.oria-sockets-types-menu ul li:first-child {margin:0}
+.oria-sockets-types-menu ul li::before {display:none}
+.oria-sockets-types-menu ul li a {display:block; padding:0 0 6px 0; position:relative; color:#696969; text-decoration:none}
+.oria-sockets-types-menu ul li a:hover::after {content:""; display:block; position:absolute; left:0; bottom:-1px; right:0; height:1px; background:#f00}
+.oria-sockets-types-menu ul li.active a {font-weight:bold}
+.oria-sockets-types-menu ul li.active a::after {content:""; display:block; position:absolute; left:0; bottom:-1px; right:0; height:2px; background:#f00}
+
+@media screen and (max-width:1159px) {
+    .oria-sockets-types-menu {border-bottom:none; margin:15px 0 0 0}
+    .oria-sockets-types-menu.open {position:relative; z-index:999}
+    .oria-sockets-types-menu-current {display:block; position:relative; border:1px solid #d9d9d9; cursor:pointer; padding:11px 20px; font-size:14px; line-height:21px; color:#404040}
+    .oria-sockets-types-menu-current strong {display:block; font-weight:bold; font-size:16px}
+    .oria-sockets-types-menu-current::after {content:""; display:block; width:19px; height:11px; position:absolute; background:url(../images/rosa-sockets-tabs-menu-current.svg) no-repeat; right:15px; top:50%; margin-top:-6px}
+    .oria-sockets-types-menu.open .oria-sockets-types-menu-current::after {transform:rotate(-180deg)}
+    .oria-sockets-types-menu ul {display:none}
+    .oria-sockets-types-menu.open ul {display:block; position:absolute; left:0; top:100%; width:100%; border:1px solid #d9d9d9; background:#fff; margin-top:-1px; border-top:none}
+    .oria-sockets-types-menu ul li {margin:0; float:none; border-top:1px solid #d9d9d9}
+    .oria-sockets-types-menu ul li a {padding:11px 20px}
+    .oria-sockets-types-menu ul li.active a::after {display:none}
+    .oria-sockets-types-container {float:none; width:auto; margin:28px 0 0 0; border-left:none}
+}
+
+.oria-sockets-types-tab {display:none}
+.oria-sockets-types-tab.active {display:block}
+.oria-sockets-types-list {font-size:0; line-height:0; letter-spacing:-1px; margin:0 -10px}
+.oria-sockets-types-item {display:inline-block; vertical-align:top; width:25%; padding:28px 10px 0 10px}
+.oria-sockets-types-item a {display:block; text-decoration:none; color:#696969}
+.oria-sockets-types-item-preview {position:relative; overflow:hidden; background:#000}
+.oria-sockets-types-item-preview img {display:block; width:100%; transition:all 0.2s}
+.oria-sockets-types-item a:hover .oria-sockets-types-item-preview img {opacity:0.8; transform:scale(1.2)}
+.oria-sockets-types-item-title {font-weight:bold; font-size:22px; line-height:25px; letter-spacing:0; padding:20px 0 0 0}
+
+@media screen and (max-width:1159px) {
+    .oria-sockets-types-item {width:50%}
+    .oria-sockets-types-item-title {font-size:15px; line-height:22px}
+}

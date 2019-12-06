@@ -435,6 +435,7 @@ $(document).ready(function() {
             var curIndex = $('.rosa-sockets-tabs-menu ul li').index(curLi);
             $('.rosa-sockets-tabs-content.active').removeClass('active');
             $('.rosa-sockets-tabs-content').eq(curIndex).addClass('active');
+            $('.rosa-sockets-tabs-menu-current').html($(this).html());
         }
         $('.rosa-sockets-tabs-menu').removeClass('open');
         e.preventDefault();
@@ -450,6 +451,67 @@ $(document).ready(function() {
         }
     });
 
+    $('.oria-sockets-style-gallery-list').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L2 11.5L13 22" stroke-width="2"/></svg></button>',
+        nextArrow: '<button type="button" class="slick-next"><svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 22L12 11.5L0.999999 1" stroke-width="2"/></svg></button>',
+        dots: true,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1159,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
+    });
+
+    $('.oria-sockets-types-item a').magnificPopup({type:'image'});
+
+    $('.oria-sockets-types-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.oria-sockets-types-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+
+            var curIndex = $('.oria-sockets-types-menu ul li').index(curLi);
+            $('.oria-sockets-types-tab.active').removeClass('active');
+            $('.oria-sockets-types-tab').eq(curIndex).addClass('active');
+            $('.oria-sockets-types-menu-current').html($(this).html());
+        }
+        $('.oria-sockets-types-menu').removeClass('open');
+        e.preventDefault();
+    });
+
+    $('.oria-sockets-types-menu-current').click(function() {
+        $('.oria-sockets-types-menu').toggleClass('open');
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.oria-sockets-types-menu').length == 0) {
+            $('.oria-sockets-types-menu').removeClass('open');
+        }
+    });
+
+});
+
+$.extend(true, $.magnificPopup.defaults, {
+    tClose: 'Закрыть (Esc)',
+    tLoading: 'Загрузка...',
+    gallery: {
+        tPrev: 'Назад (Left arrow key)',
+        tNext: 'Дальше (Right arrow key)',
+        tCounter: '%curr% из %total%'
+    },
+    image: {
+        tError: '<a href="%url%">Изображение</a> не может быть загружено.'
+    },
+    ajax: {
+        tError: '<a href="%url%">Контент</a> не может быть загружен.'
+    }
 });
 
 $(window).on('resize', function() {
