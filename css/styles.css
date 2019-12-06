@@ -19,8 +19,8 @@ a {color:#fc6c6c; text-decoration:none; transition:all 0.2s}
 a:hover {color:#ff3d3d}
 a:active {color:#fc6c6c}
 
-img,
-iframe {border:none; max-width:100%; max-height:100%; height:auto}
+img {border:none; max-width:100%; height:auto}
+iframe {border:none; max-width:100%}
 
 ::-ms-clear {display:none}
 
@@ -1255,17 +1255,17 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 .rosa-thermostats-info::after {content:""; display:block; clear:both}
 .rosa-thermostats-info h2 {margin:0; float:right; width:570px}
 .rosa-thermostats-info-photo {float:left; line-height:0; width:472px}
-.rosa-thermostats-info-list {float:right; width:570px; padding:12px 0 0 0}
-.rosa-thermostats-info-list-item {margin:20px 0 0 0}
+.rosa-thermostats-info-list {float:right; width:570px; padding:32px 0 0 0; column-count:2}
+.rosa-thermostats-info-list-item {margin:0 0 20px 0}
 .rosa-thermostats-info-list-item::after {content:""; display:block; clear:both}
 .rosa-thermostats-info-list-item-icon {float:left; width:34px; line-height:0}
 .rosa-thermostats-info-list-item-text {margin:0 0 0 53px; color:#696969; padding:6px 0 0 0}
 
 @media screen and (max-width:1159px) {
-    .rosa-thermostats-info {margin:60px 0 100px 0}
+    .rosa-thermostats-info {margin:60px 0 80px 0}
     .rosa-thermostats-info h2 {float:none; width:auto}
     .rosa-thermostats-info-photo {float:none; width:auto; margin:46px 0 0 0; text-align:center}
-    .rosa-thermostats-info-list {float:none; width:auto; padding:0}
+    .rosa-thermostats-info-list {float:none; width:auto; padding:20px 0 0 0; column-count:1}
 }
 
 .rosa-thermostats-add {margin:136px 0 175px 0}
@@ -1285,3 +1285,49 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
     .rosa-thermostats-add-right blockquote {display:none}
     .rosa-thermostats-add-right blockquote.rosa-thermostats-add-mobile {display:block; margin:32px 0}
 }
+
+.rosa-sockets-tabs {margin:110px 0 165px 0}
+.rosa-sockets-tabs::after {content:""; display:block; clear:both}
+.rosa-sockets-tabs-menu {float:left; width:372px; border-right:1px solid #d7d7d7; position:relative}
+.rosa-sockets-tabs-menu-current {display:none}
+.rosa-sockets-tabs-menu ul {margin:0; padding:0; list-style:none; border-bottom:1px solid #d7d7d7}
+.rosa-sockets-tabs-menu ul li {margin:0; padding:0; border-top:1px solid #d7d7d7}
+.rosa-sockets-tabs-menu ul li::before {display:none}
+.rosa-sockets-tabs-menu ul li a {display:block; padding:26px 0 24px 0; color:#696969; font-size:15px; line-height:22px; position:relative}
+.rosa-sockets-tabs-menu ul li a strong {font-weight:bold; font-size:18px; display:block; padding:0 0 4px 0}
+.rosa-sockets-tabs-menu ul li a:hover::before,
+.rosa-sockets-tabs-menu ul li.active a::before {content:""; display:block; position:absolute; right:-1px; top:0; bottom:0; width:6px; background:#f00}
+.rosa-sockets-tabs-menu ul li.active a::after {content:""; display:block; position:absolute; right:-15px; top:50%; margin-top:-7px; border-left:15px solid #f00; border-top:7px solid transparent; border-bottom:7px solid transparent}
+.rosa-sockets-tabs-container {float:left; width:calc(100% - 372px); margin:0 0 0 -1px; border-left:1px solid #d7d7d7}
+.rosa-sockets-tabs-content {display:none; line-height:0}
+.rosa-sockets-tabs-content.active {display:block}
+
+@media screen and (max-width:1159px) {
+    .rosa-sockets-tabs {margin:60px 0 90px 0}
+    .rosa-sockets-tabs-menu {float:none; width:auto; border-right:none}
+    .rosa-sockets-tabs-menu.open {position:relative; z-index:999}
+    .rosa-sockets-tabs-menu-current {display:block; position:relative; border:1px solid #d9d9d9; cursor:pointer; padding:11px 20px; font-size:14px; line-height:21px; color:#404040}
+    .rosa-sockets-tabs-menu-current strong {display:block; font-weight:bold; font-size:16px}
+    .rosa-sockets-tabs-menu-current::after {content:""; display:block; width:19px; height:11px; position:absolute; background:url(../images/rosa-sockets-tabs-menu-current.svg) no-repeat; right:15px; top:50%; margin-top:-6px}
+    .rosa-sockets-tabs-menu.open .rosa-sockets-tabs-menu-current::after {transform:rotate(-180deg)}
+    .rosa-sockets-tabs-menu ul {display:none}
+    .rosa-sockets-tabs-menu.open ul {display:block; position:absolute; left:0; top:100%; width:100%; border:1px solid #d9d9d9; background:#fff; margin-top:-1px; border-top:none}
+    .rosa-sockets-tabs-menu ul li a {padding-left:20px; padding-right:20px}
+    .rosa-sockets-tabs-menu ul li.active a::after {display:none}
+    .rosa-sockets-tabs-container {float:none; width:auto; margin:28px 0 0 0; border-left:none}
+}
+
+.oria-prefs {margin:66px 0; column-count:4}
+.oria-pref {padding:0 0 32px 0}
+.oria-pref-inner {display:table}
+.oria-pref-icon {display:table-cell; vertical-align:middle; line-height:0; width:50px}
+.oria-pref-title {display:table-cell; vertical-align:middle; color:#696969; padding:0 0 0 20px}
+
+@media screen and (max-width:1159px) {
+    .oria-prefs {column-count:2}
+    .oria-pref-inner {display:block}
+    .oria-pref-icon {display:block; width:auto}
+    .oria-pref-title {display:block; padding:10px 0 0 0}
+}
+
+.oria-thermostats-center {text-align:center; line-height:0; margin:66px 0}

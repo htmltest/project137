@@ -426,6 +426,30 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('.rosa-sockets-tabs-menu ul li a').click(function(e) {
+        var curLi = $(this).parent();
+        if (!curLi.hasClass('active')) {
+            $('.rosa-sockets-tabs-menu ul li.active').removeClass('active');
+            curLi.addClass('active');
+
+            var curIndex = $('.rosa-sockets-tabs-menu ul li').index(curLi);
+            $('.rosa-sockets-tabs-content.active').removeClass('active');
+            $('.rosa-sockets-tabs-content').eq(curIndex).addClass('active');
+        }
+        $('.rosa-sockets-tabs-menu').removeClass('open');
+        e.preventDefault();
+    });
+
+    $('.rosa-sockets-tabs-menu-current').click(function() {
+        $('.rosa-sockets-tabs-menu').toggleClass('open');
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.rosa-sockets-tabs-menu').length == 0) {
+            $('.rosa-sockets-tabs-menu').removeClass('open');
+        }
+    });
+
 });
 
 $(window).on('resize', function() {
