@@ -1318,6 +1318,7 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 }
 
 .oria-prefs {margin:66px 0; column-count:4}
+.oria-prefs-switches {column-count:3}
 .oria-pref {padding:0 0 32px 0}
 .oria-pref-inner {display:table}
 .oria-pref-icon {display:table-cell; vertical-align:middle; line-height:0; width:50px}
@@ -1325,8 +1326,10 @@ footer {height:212px; position:relative; margin:-212px 0 0 0; background:#4c4c4c
 
 @media screen and (max-width:1159px) {
     .oria-prefs {column-count:2}
+    .oria-prefs-switches {column-count:2}
     .oria-pref-inner {display:block}
     .oria-pref-icon {display:block; width:auto}
+    .oria-pref-icon img {width:50px}
     .oria-pref-title {display:block; padding:10px 0 0 0}
 }
 
