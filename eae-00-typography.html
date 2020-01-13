@@ -368,7 +368,7 @@
                                 <label><input type="radio" name="radio" value="1" checked="checked" /><span>Вариант&nbsp;1</span></label>
                             </div>
                             <div class="form-radio">
-                                <label><input type="radio" name="radio" value="2" /><span>Вариант 2</span></label>
+                                <label><input type="radio" name="radio" value="2" /><span>Продукцию EAE используют в более, чем 100 странах: от Великобритании до Тайваня. Группа EAE имеет свыше 30 патентов, 300 торговых марок и 100 промышленных образцов. В Группе Компаний EAE работают более 2500 сотрудников по всему миру.</span></label>
                             </div>
                             <div class="form-radio">
                                 <label><input type="radio" name="radio" value="3" /><span>Вариант 3</span></label>
@@ -379,7 +379,7 @@
                                 <label><input type="checkbox" name="checkbox1" checked="checked" class="required" /><span>Вариант&nbsp;1</span></label>
                             </div>
                             <div class="form-checkbox">
-                                <label><input type="checkbox" name="checkbox2" /><span>Вариант 2</span></label>
+                                <label><input type="checkbox" name="checkbox2" /><span>Продукцию EAE используют в более, чем 100 странах: от Великобритании до Тайваня. Группа EAE имеет свыше 30 патентов, 300 торговых марок и 100 промышленных образцов. В Группе Компаний EAE работают более 2500 сотрудников по всему миру.</span></label>
                             </div>
                             <div class="form-checkbox">
                                 <label><input type="checkbox" name="checkbox3" /><span>Вариант 3</span></label>
@@ -388,13 +388,26 @@
                             <div class="form-input"><span>Коментарий</span><textarea name="comment" cols="5" rows="3" class="required">В NASA называют большой удачей получение такого снимка, на котором заметны хоть какие-то детали металлического большой удачей получение такого снимка,</textarea></div>
 
                             <div class="form-file">
-                                <div class="form-file-input"><span>Загрузка файла</span><input type="file" name="file" /></div>
+                                <div class="form-file-input"><span>Загрузка файла<input type="file" name="file" class="required" /></span></div>
+                                <div class="form-file-name"></div>
+                            </div>
+
+                            <div class="form-file form-file-big">
+                                <div class="form-file-input"><span>Загрузка файла<input type="file" name="file1" class="required" /></span></div>
+                                <div class="form-file-name"></div>
                             </div>
 
                             <div class="form-ctrl">
                                 <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
                                 <div class="form-reset"><input type="reset" value="Очистить форму" /></div>
                             </div>
+                            <p><a href="#" class="btn btn-big">Отправить</a></p>
+                        </form>
+
+                        <h2>Ajax-форма</h2>
+                        <form action="ajax/success.html" method="post" class="ajax-form">
+                            <div class="form-input"><span>Фамилия</span><input type="text" name="name" value="" class="required" /></div>
+                            <div class="form-submit"><input type="submit" value="Отправить" class="btn" /></div>
                         </form>
 
                         <div class="pager">

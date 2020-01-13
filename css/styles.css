@@ -72,21 +72,26 @@ hr {margin:32px 0 66px 0; height:1px; padding:0; border:none; background:#ddd}
 
 .wrapper form {margin:44px 0; padding:0}
 
-.message-error {margin:20px 0; background:rgba(236, 29, 34, 0.04); border:1px solid rgba(236, 29, 34, 0.28); padding:27px 40px 22px 40px}
-.message-error-title {color:#ec1d22; font-size:18px; line-height:27px}
-.message-error-text {margin:6px 0 0 0; color:#181818}
+.message-error {margin:20px 0; background:rgba(236, 29, 34, 0.04); border:1px solid rgba(236, 29, 34, 0.28); padding:42px 40px 34px 40px}
+.message-error-title {color:#ec1d22; font-size:18px; line-height:27px; position:relative; padding:0 0 0 53px}
+.message-error-title::before {content:""; display:block; width:37px; height:37px; position:absolute; left:0; top:-5px; background:url(../images/message-error.svg) no-repeat}
+.message-error-text {margin:14px 0 0 0; color:#181818}
 
-.message-success {margin:20px 0; background:rgba(137, 228, 129, 0.15); border:1px solid rgba(137, 228, 129, 0.67); padding:27px 40px 22px 40px}
-.message-success-title {color:#53804f; font-size:18px; line-height:27px}
-.message-success-text {margin:6px 0 0 0; color:#181818}
+.message-success {margin:20px 0; background:rgba(137, 228, 129, 0.15); border:1px solid rgba(137, 228, 129, 0.67); padding:42px 40px 34px 40px}
+.message-success-title {color:#53804f; font-size:18px; line-height:27px; position:relative; padding:0 0 0 53px}
+.message-success-title::before {content:""; display:block; width:37px; height:37px; position:absolute; left:0; top:-5px; background:url(../images/message-success.svg) no-repeat}
+.message-success-text {margin:14px 0 0 0; color:#181818}
 
-.btn {display:inline-block; margin:0; padding:0 20px; white-space:nowrap; overflow:visible; outline:none; vertical-align:top; height:40px; text-decoration:none; background:#fc6c6c; color:#fff; border:none; border-radius:3px; font:bold 14px/40px Arial, sans-serif; letter-spacing:0; text-align:center; transition:all 0.2s; position:relative; -webkit-appearance:none; cursor:pointer; text-transform:none}
+.btn {display:inline-block; margin:0; padding:0 35px; white-space:nowrap; overflow:visible; outline:none; vertical-align:top; height:40px; text-decoration:none; background:#fc6c6c; color:#fff; border:none; border-radius:3px; font:bold 15px/40px Arial, sans-serif; letter-spacing:0; text-align:center; transition:all 0.2s; position:relative; -webkit-appearance:none; cursor:pointer; text-transform:none}
 .fonts-loaded .btn {font-family:OpenSans, sans-serif}
 .btn:hover {background:#ff3d3d; color:#fff}
 .btn:active {background:#fc6c6c; color:#fff}
 
+.btn-big {height:46px; font-size:17px; line-height:46px; padding:0 41px}
+
 @media screen and (max-width:1159px) {
-    .btn {font-size:19px; line-height:55px; height:55px}
+    .btn {font-size:19px; line-height:55px; height:55px; padding:0; width:100%}
+    .btn-big {height:55px; font-size:19px; line-height:55px; padding:0}
 }
 
 .form-input {position:relative; padding:21px 0 0 0; margin:25px 0 0 0}
@@ -157,11 +162,23 @@ label.error {display:block; font-size:12px; line-height:18px; color:#f00}
 }
 
 .form-file {margin:46px 0 0 0}
-.form-file-input {position:relative; display:block; padding:3px 0; height:27px; font-size:14px; line-height:22px; background:transparent; overflow:hidden; cursor:pointer; color:#000; border-bottom:1px solid #797979; border-radius:0; transition:all 0.2s; text-transform:uppercase}
-.form-file-input:hover {border-bottom-color:#000}
-.form-file-input::before {content:""; display:block; position:absolute; right:0; bottom:9px; width:19px; height:17px; background:url(../images/file.svg) no-repeat}
+.form-file::after {content:""; display:block; clear:both}
+.form-file-input {float:left; width:230px; position:relative; overflow:hidden}
+.form-file-input span {position:relative; display:block; height:40px; font-weight:bold; font-size:14px; line-height:40px; margin:0 0 21px 0; background:#fc6c6c; cursor:pointer; color:#fff; transition:all 0.2s; text-align:center; border-radius:3px}
+.form-file-input span:hover {background:#ff3d3d}
+.form-file-input span:active {background:#fc6c6c}
+.form-file-input span::before {content:""; display:inline-block; vertical-align:middle; margin:-2px 11px 0 0; width:19px; height:17px; background:url(../images/file.svg) no-repeat; background-size:100%}
 .form-file-input input {height:200px; position:absolute; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; background:url(../images/blank.gif); -webkit-appearance:none}
-.form-file-input span {display:inline-block; vertical-align:middle; position:relative; max-width:90%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.form-file-input label.error {position:absolute; left:0; bottom:-21px; font-weight:normal}
+.form-file-name {margin:0 0 0 250px; color:#181818; opacity:0.8; padding:9px 0 0 0}
+.form-file-big .form-file-input span {height:46px; line-height:46px; font-size:17px}
+
+@media screen and (max-width:1159px) {
+    .form-file-input {float:none; width:100%}
+    .form-file-input span {height:55px; line-height:55px; font-size:19px}
+    .form-file-big .form-file-input span {height:55px; line-height:55px; font-size:19px}
+    .form-file-name {margin:0}
+}
 
 .form-ctrl {margin:25px 0 0 0}
 .form-ctrl::after {content:""; display:block; clear:both}
@@ -180,6 +197,9 @@ label.error {display:block; font-size:12px; line-height:18px; color:#f00}
 }
 
 .form-captcha {margin:37px 0}
+
+form.loading {position:relative}
+form.loading::after {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(255, 255, 255, 0.5) url(../images/loading-big.gif) no-repeat center}
 
 .pager {text-align:center; margin:44px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
 .search-results+.pager {text-align:left}

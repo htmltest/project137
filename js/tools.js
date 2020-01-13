@@ -30,9 +30,9 @@ $(document).ready(function() {
         var curForm = curField.parents().filter('form');
         var curName = curInput.val().replace(/.*(\/|\\)/, '');
         if (curName != '') {
-            curField.find('.form-file-input span').html(curName);
+            curField.find('.form-file-name').html(curName);
         } else {
-            curField.find('.form-file-input span').html('Загрузка файла');
+            curField.find('.form-file-name').html('');
         }
     });
 
@@ -551,7 +551,34 @@ function initForm(curForm) {
     curForm.find('input.phoneRU').mask('+7 (000) 000-00-00');
 
     curForm.validate({
-        ignore: ''
+        ignore: '',
+        submitHandler: function(form) {
+            if ($(form).hasClass('ajax-form')) {
+                $(form).addClass('loading');
+                var formData = new FormData(form);
+
+                if ($(form).find('[type=file]').length != 0) {
+                    var file = $(form).find('[type=file]')[0].files[0];
+                    formData.append('file', file);
+                }
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(form).attr('action'),
+                    processData: false,
+                    contentType: false,
+                    dataType: 'html',
+                    data: formData,
+                    cache: false
+                }).done(function(html) {
+                    $(form).find('.message-error, .message-success').remove();
+                    $(form).append(html);
+                    $(form).removeClass('loading');
+                });
+            } else {
+                form.submit();
+            }
+        }
     });
 }
 
